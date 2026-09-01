@@ -76,9 +76,20 @@ export default function AboutPage() {
             .
           </p>
           <p>
-            Ina found an affinity with the psychologically alert figurative work of Alberto Giacometti,
-            Alice Neel, and Lucian Freud. Their work helped confirm that a portrait could remain
-            restless, direct, and emotionally present without becoming a literal transcription.
+            Ina found an affinity with the psychologically alert figurative work of{" "}
+            <a className="artist-reference-link" href="https://www.moma.org/artists/2141-alberto-giacometti">
+              Alberto Giacometti
+            </a>
+            ,{" "}
+            <a className="artist-reference-link" href="https://www.aliceneel.com/">
+              Alice Neel
+            </a>
+            , and{" "}
+            <a className="artist-reference-link" href="http://lucianfreud.com/">
+              Lucian Freud
+            </a>
+            . Their work helped confirm that a portrait could remain restless, direct, and emotionally
+            present without becoming a literal transcription.
           </p>
         </div>
       </section>
