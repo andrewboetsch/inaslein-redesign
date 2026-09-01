@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const categories = getAvailableCategories().map((item) => ({
     href: item.href,
-    label: item.shortLabel,
+    label: item.navLabel,
     count: item.count,
   }));
 

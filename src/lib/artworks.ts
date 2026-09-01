@@ -31,31 +31,36 @@ export type ArtworkRecord = {
 
 export const CATEGORY_INFO: Record<
   ArtworkCategory,
-  { label: string; shortLabel: string; description: string }
+  { label: string; shortLabel: string; navLabel: string; description: string }
 > = {
   portraits: {
     label: "Portraits",
     shortLabel: "Portraits",
+    navLabel: "Portraits",
     description: "Individuals and pairs, observed for presence rather than pose.",
   },
   "family-histories": {
     label: "Family Histories",
     shortLabel: "Family histories",
+    navLabel: "Family histories",
     description: "Families reconstructed through memory, photographs, conversation, and research.",
   },
   "equestrian-animals": {
     label: "Equestrian & Animal Subjects",
     shortLabel: "Equestrian & animals",
+    navLabel: "Animals",
     description: "Horses, dogs, and other companions studied for movement and character.",
   },
   "studies-drawings": {
     label: "Studies & Drawings",
     shortLabel: "Studies & drawings",
+    navLabel: "Studies & drawings",
     description: "Works on paper and exploratory studies from the studio archive.",
   },
   studio: {
     label: "Studio",
     shortLabel: "Studio",
+    navLabel: "Studio (In Progress)",
     description: "A painting in progress, and the story that set it in motion.",
   },
 };

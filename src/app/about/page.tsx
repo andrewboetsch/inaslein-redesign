@@ -44,7 +44,7 @@ export default function AboutPage() {
           <p>
             Ina remembers drawing from the age of four. At about nine, her mother arranged formal
             instruction with a local art teacher who asked her to sketch children as they moved around
-            a patio. She had to look quickly and keep the line alive. That early exercise still echoes
+            a playground. She had to look quickly and keep the line alive. That early exercise still echoes
             in the energy she brings to a figure, even when the sitter is still.
           </p>
           <p>
