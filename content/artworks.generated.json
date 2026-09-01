@@ -333,30 +333,6 @@
     }
   },
   {
-    "slug": "inside-the-bakery",
-    "category": "portraits",
-    "alt": "Painted scene of a figure working inside a bakery kitchen",
-    "featured": false,
-    "order": 80,
-    "width": 1777,
-    "height": 1182,
-    "orientation": "landscape",
-    "images": {
-      "thumb": {
-        "avif": "/artwork/generated/inside-the-bakery-thumb.avif",
-        "webp": "/artwork/generated/inside-the-bakery-thumb.webp"
-      },
-      "display": {
-        "avif": "/artwork/generated/inside-the-bakery-display.avif",
-        "webp": "/artwork/generated/inside-the-bakery-display.webp"
-      },
-      "full": {
-        "avif": "/artwork/generated/inside-the-bakery-full.avif",
-        "webp": "/artwork/generated/inside-the-bakery-full.webp"
-      }
-    }
-  },
-  {
     "slug": "ina-in-studio",
     "category": "site",
     "title": "Ina Slein in her studio",

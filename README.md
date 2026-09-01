@@ -15,7 +15,7 @@ No CMS, database, runtime API, prices, or contact form are used. The production 
 | `/work/studio` | Curated studio/process selection |
 | `/about` | Interview-led, paraphrased artist story |
 | `/cv` | Confirmed training, practice, and selected projects |
-| `/contact` | Public phone, email, and Palm Beach County location |
+| `/contact` | Public phone, email, and Lake Worth, Florida location |
 
 Categories with no approved artwork are omitted from navigation and the sitemap. Legacy GoDaddy routes are represented as client-side fallback pages for GitHub Pages and as permanent redirects in `public/_redirects` for Cloudflare Pages.
 

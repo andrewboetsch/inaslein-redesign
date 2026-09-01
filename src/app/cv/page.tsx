@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "CV",
@@ -14,7 +15,7 @@ export default function CvPage() {
         <h1>Curriculum Vitae</h1>
         <p>
           Ina Slein is a painter whose portraits are built through observation, conversation, and
-          research. She works from Palm Beach County, Florida.
+          research. She works from {BUSINESS.cityDisplay}.
         </p>
       </header>
 

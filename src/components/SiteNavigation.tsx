@@ -121,7 +121,7 @@ export function SiteNavigation({ categories }: { categories: CategoryLink[] }) {
         <p className="site-discipline">Paintings</p>
         <NavList pathname={pathname} categories={categories} />
         <div className="sidebar-location">
-          <p>Palm Beach County, Florida</p>
+          <p>{BUSINESS.cityDisplay}</p>
           <p>Studio archive</p>
         </div>
       </aside>

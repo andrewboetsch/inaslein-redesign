@@ -4,12 +4,13 @@ import { ARTWORKS, getFeaturedArtwork } from "@/lib/artworks";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Selected paintings by Ina Slein: portraits, family histories, animal subjects, and work from the studio.",
+  description: "Selected finished paintings by Ina Slein: portraits, family histories, and animal subjects.",
   alternates: { canonical: "/" },
 };
 
 export default function WorkPage() {
   const featured = getFeaturedArtwork();
+  const finishedArtworks = ARTWORKS.filter((artwork) => artwork.category !== "studio");
 
   return (
     <div className="work-page">
@@ -19,10 +20,10 @@ export default function WorkPage() {
           <h1>Paintings</h1>
         </div>
         <p>
-          Portraits, family histories, animal subjects, and a small view into the studio.
+          Portraits, family histories, and animal subjects.
         </p>
       </header>
-      <ArtworkGallery artworks={ARTWORKS} featuredSlug={featured?.slug} />
+      <ArtworkGallery artworks={finishedArtworks} featuredSlug={featured?.slug} />
     </div>
   );
 }

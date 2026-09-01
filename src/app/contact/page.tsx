@@ -31,7 +31,7 @@ export default function ContactPage() {
         </div>
         <div>
           <dt>Studio</dt>
-          <dd>Palm Beach County, Florida</dd>
+          <dd>{BUSINESS.cityDisplay}</dd>
         </div>
       </dl>
 
