@@ -653,6 +653,18 @@ picture img {
   line-height: 1.85;
 }
 
+.artist-reference-link {
+  text-decoration: underline;
+  text-decoration-color: #aaa9a2;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.artist-reference-link:hover {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
+
 .about-artwork-section {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);

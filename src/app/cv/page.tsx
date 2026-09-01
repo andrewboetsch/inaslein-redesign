@@ -63,9 +63,24 @@ export default function CvPage() {
               <li>Parsons School of Design</li>
             </ul>
             <p className="cv-note">
-              At the New York Studio School, Ina studied with Mercedes Matter, Nicolas Carone,
-              Paul Georges, and Sidney Geist. Drawing from models in motion made the school a
-              particularly formative part of her training.
+              At the New York Studio School, Ina studied with{" "}
+              <a className="artist-reference-link" href="https://gagosian.com/quarterly/2020/10/20/essay-game-changer-mercedes-matter/">
+                Mercedes Matter
+              </a>
+              ,{" "}
+              <a className="artist-reference-link" href="https://nicolascaroneestate.org/">
+                Nicolas Carone
+              </a>
+              ,{" "}
+              <a className="artist-reference-link" href="https://paulgeorges.com/">
+                Paul Georges
+              </a>
+              , and{" "}
+              <a className="artist-reference-link" href="https://www.ericfirestonegallery.com/artists/sidney-geist">
+                Sidney Geist
+              </a>
+              . Drawing from models in motion made the school a particularly formative part of her
+              training.
             </p>
           </div>
         </div>

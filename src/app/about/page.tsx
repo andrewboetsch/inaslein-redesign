@@ -57,8 +57,23 @@ export default function AboutPage() {
             From 1975 to 1979, she studied painting at Bard College, New York University, the New York
             Studio School of Drawing, Painting and Sculpture, and Parsons School of Design. The Studio
             School was especially formative: drawing from models in motion strengthened the searching,
-            active line she had begun developing as a child. She worked there with Mercedes Matter,
-            Nicolas Carone, Paul Georges, and Sidney Geist.
+            active line she had begun developing as a child. She worked there with{" "}
+            <a className="artist-reference-link" href="https://gagosian.com/quarterly/2020/10/20/essay-game-changer-mercedes-matter/">
+              Mercedes Matter
+            </a>
+            ,{" "}
+            <a className="artist-reference-link" href="https://nicolascaroneestate.org/">
+              Nicolas Carone
+            </a>
+            ,{" "}
+            <a className="artist-reference-link" href="https://paulgeorges.com/">
+              Paul Georges
+            </a>
+            , and{" "}
+            <a className="artist-reference-link" href="https://www.ericfirestonegallery.com/artists/sidney-geist">
+              Sidney Geist
+            </a>
+            .
           </p>
           <p>
             Ina found an affinity with the psychologically alert figurative work of Alberto Giacometti,
