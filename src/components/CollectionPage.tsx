@@ -24,7 +24,7 @@ export function CollectionPage({ category }: { category: ArtworkCategory }) {
             <h2 id="studio-journal-title">A portrait shaped by return</h2>
             <p>
               The equestrian portrait now taking shape in Ina&apos;s studio began with a thoroughbred
-              that had escaped neglect in Ontario. After traveling several miles, the horse appeared
+              that had escaped neglect in Ontario, Canada. After traveling several miles, the horse appeared
               near the land where it had been bred more than two decades earlier. An image shared
               online helped reconnect it with the breeder who had known it at the beginning of its life.
             </p>
