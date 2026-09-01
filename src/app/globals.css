@@ -179,6 +179,17 @@ picture img {
   text-transform: uppercase;
 }
 
+@media (pointer: coarse), (max-width: 899px) {
+  .browse-nav nav {
+    gap: 0;
+  }
+
+  .browse-link {
+    min-height: 44px;
+    align-items: center;
+  }
+}
+
 .sidebar-location {
   margin-top: 32px;
   color: var(--muted);
