@@ -16,8 +16,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { category } = await params;
   if (!categories.includes(category as ArtworkCategory)) return {};
-  const info = CATEGORY_INFO[category as ArtworkCategory];
-  const preview = artworksByCategory(category as ArtworkCategory)[0];
+  const typedCategory = category as ArtworkCategory;
+  const info = CATEGORY_INFO[typedCategory];
+  const collection = artworksByCategory(typedCategory);
+  const preview = typedCategory === "studio" ? collection.at(-1) : collection[0];
   return {
     title: info.label,
     description: info.description,

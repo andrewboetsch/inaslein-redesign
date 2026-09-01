@@ -341,6 +341,67 @@ picture img {
   border-top: 0;
 }
 
+.studio-journal,
+.studio-next-step {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 760px);
+  gap: 48px;
+  padding: 54px 0 60px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.studio-journal-labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.studio-journal-labels .section-label,
+.studio-next-step .section-label {
+  margin: 0;
+}
+
+.studio-status {
+  margin: 0;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.studio-journal-copy h2,
+.studio-next-step h2 {
+  margin: 0 0 24px;
+  font-family: "Bodoni Moda Variable", "Times New Roman", serif;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+}
+
+.studio-journal-copy p,
+.studio-next-step p {
+  max-width: 680px;
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.studio-page .featured-artwork {
+  margin-top: 64px;
+}
+
+.studio-next-step {
+  margin-top: 72px;
+  border-bottom: 0;
+}
+
 .empty-collection {
   margin: 80px 0;
   color: var(--muted);
@@ -888,6 +949,29 @@ picture img {
 
   .collection-page .art-index {
     margin-top: 28px;
+  }
+
+  .studio-journal,
+  .studio-next-step {
+    display: block;
+    padding: 38px 0 42px;
+  }
+
+  .studio-journal-labels {
+    margin-bottom: 28px;
+  }
+
+  .studio-journal-copy h2,
+  .studio-next-step h2 {
+    font-size: 34px;
+  }
+
+  .studio-page .featured-artwork {
+    margin-top: 42px;
+  }
+
+  .studio-next-step {
+    margin-top: 54px;
   }
 
   .artwork-viewer {

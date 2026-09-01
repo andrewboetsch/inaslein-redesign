@@ -20,6 +20,37 @@ export default function CvPage() {
       </header>
 
       <section className="cv-section">
+        <h2>Early formation</h2>
+        <div className="cv-entry">
+          <p className="cv-date">Age four</p>
+          <div>
+            <h3>Drawing begins</h3>
+            <p>Ina remembers drawing as a constant part of her life from the age of four.</p>
+          </div>
+        </div>
+        <div className="cv-entry">
+          <p className="cv-date">About age nine</p>
+          <div>
+            <h3>First formal instruction</h3>
+            <p>
+              Early lessons included drawing children in motion, establishing an interest in gesture,
+              speed, and the energy of a figure that continues in her work.
+            </p>
+          </div>
+        </div>
+        <div className="cv-entry">
+          <p className="cv-date">School years</p>
+          <div>
+            <h3>Looking and study</h3>
+            <p>
+              Frequent visits with her mother to the Metropolitan Museum of Art and the Museum of
+              Modern Art, followed by sustained art study in West Orange, New Jersey.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="cv-section">
         <h2>Education and training</h2>
         <div className="cv-entry">
           <p className="cv-date">1975–1979</p>
@@ -33,7 +64,8 @@ export default function CvPage() {
             </ul>
             <p className="cv-note">
               At the New York Studio School, Ina studied with Mercedes Matter, Nicolas Carone,
-              Paul Georges, and Sidney Geist.
+              Paul Georges, and Sidney Geist. Drawing from models in motion made the school a
+              particularly formative part of her training.
             </p>
           </div>
         </div>

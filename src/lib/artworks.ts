@@ -56,7 +56,7 @@ export const CATEGORY_INFO: Record<
   studio: {
     label: "Studio",
     shortLabel: "Studio",
-    description: "A small, intentional view of paintings as they develop.",
+    description: "A painting in progress, and the story that set it in motion.",
   },
 };
 
