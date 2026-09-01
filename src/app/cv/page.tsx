@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ExternalLink } from "@/components/ExternalLink";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
@@ -64,21 +65,21 @@ export default function CvPage() {
             </ul>
             <p className="cv-note">
               At the New York Studio School, Ina studied with{" "}
-              <a className="artist-reference-link" href="https://gagosian.com/quarterly/2020/10/20/essay-game-changer-mercedes-matter/">
+              <ExternalLink className="artist-reference-link" href="https://gagosian.com/quarterly/2020/10/20/essay-game-changer-mercedes-matter/">
                 Mercedes Matter
-              </a>
+              </ExternalLink>
               ,{" "}
-              <a className="artist-reference-link" href="https://nicolascaroneestate.org/">
+              <ExternalLink className="artist-reference-link" href="https://nicolascaroneestate.org/">
                 Nicolas Carone
-              </a>
+              </ExternalLink>
               ,{" "}
-              <a className="artist-reference-link" href="https://paulgeorges.com/">
+              <ExternalLink className="artist-reference-link" href="https://paulgeorges.com/">
                 Paul Georges
-              </a>
+              </ExternalLink>
               , and{" "}
-              <a className="artist-reference-link" href="https://www.ericfirestonegallery.com/artists/sidney-geist">
+              <ExternalLink className="artist-reference-link" href="https://www.ericfirestonegallery.com/artists/sidney-geist">
                 Sidney Geist
-              </a>
+              </ExternalLink>
               . Drawing from models in motion made the school a particularly formative part of her
               training.
             </p>

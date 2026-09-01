@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArtworkImage } from "@/components/ArtworkImage";
+import { ExternalLink } from "@/components/ExternalLink";
 import { getArtwork } from "@/lib/artworks";
 
 export const metadata: Metadata = {
@@ -58,36 +59,36 @@ export default function AboutPage() {
             Studio School of Drawing, Painting and Sculpture, and Parsons School of Design. The Studio
             School was especially formative: drawing from models in motion strengthened the searching,
             active line she had begun developing as a child. She worked there with{" "}
-            <a className="artist-reference-link" href="https://gagosian.com/quarterly/2020/10/20/essay-game-changer-mercedes-matter/">
+            <ExternalLink className="artist-reference-link" href="https://gagosian.com/quarterly/2020/10/20/essay-game-changer-mercedes-matter/">
               Mercedes Matter
-            </a>
+            </ExternalLink>
             ,{" "}
-            <a className="artist-reference-link" href="https://nicolascaroneestate.org/">
+            <ExternalLink className="artist-reference-link" href="https://nicolascaroneestate.org/">
               Nicolas Carone
-            </a>
+            </ExternalLink>
             ,{" "}
-            <a className="artist-reference-link" href="https://paulgeorges.com/">
+            <ExternalLink className="artist-reference-link" href="https://paulgeorges.com/">
               Paul Georges
-            </a>
+            </ExternalLink>
             , and{" "}
-            <a className="artist-reference-link" href="https://www.ericfirestonegallery.com/artists/sidney-geist">
+            <ExternalLink className="artist-reference-link" href="https://www.ericfirestonegallery.com/artists/sidney-geist">
               Sidney Geist
-            </a>
+            </ExternalLink>
             .
           </p>
           <p>
             Ina found an affinity with the psychologically alert figurative work of{" "}
-            <a className="artist-reference-link" href="https://www.moma.org/artists/2141-alberto-giacometti">
+            <ExternalLink className="artist-reference-link" href="https://www.moma.org/artists/2141-alberto-giacometti">
               Alberto Giacometti
-            </a>
+            </ExternalLink>
             ,{" "}
-            <a className="artist-reference-link" href="https://www.aliceneel.com/">
+            <ExternalLink className="artist-reference-link" href="https://www.aliceneel.com/">
               Alice Neel
-            </a>
+            </ExternalLink>
             , and{" "}
-            <a className="artist-reference-link" href="http://lucianfreud.com/">
+            <ExternalLink className="artist-reference-link" href="http://lucianfreud.com/">
               Lucian Freud
-            </a>
+            </ExternalLink>
             . Their work helped confirm that a portrait could remain restless, direct, and emotionally
             present without becoming a literal transcription.
           </p>
