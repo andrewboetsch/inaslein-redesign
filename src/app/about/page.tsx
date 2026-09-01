@@ -1,89 +1,102 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import { MuseumLabel } from "@/components/MuseumLabel";
-import { PaletteMark } from "@/components/PaletteMark";
-import { FEATURED_PIECE } from "@/lib/artworks";
-import { withBasePath } from "@/lib/basePath";
+import { ArtworkImage } from "@/components/ArtworkImage";
+import { getArtwork } from "@/lib/artworks";
 
 export const metadata: Metadata = {
-  title: "About | Ina Slein",
-  description:
-    "Ina Slein's training at the New York Studio School and her approach to portrait painting.",
+  title: "About",
+  description: "Ina Slein's path to painting and her research-led approach to portraits and family histories.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Ina Slein",
+    description: "A painter attentive to people, relationships, memory, and the histories held in an image.",
+    images: [{ url: "/artwork/generated/ina-in-studio-display.webp" }],
+  },
 };
 
 export default function AboutPage() {
+  const studioPortrait = getArtwork("ina-in-studio");
+  const mindFloat = getArtwork("mind-float");
+
   return (
-    <section className="mx-auto max-w-6xl px-6 sm:px-10 py-20">
-      <div className="flex items-center gap-4 mb-10">
-        <PaletteMark size={22} />
-        <h1 className="label-caps text-xs text-ink-soft">About the Artist</h1>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
+    <article className="text-page about-page">
+      <header className="about-introduction">
         <div>
-          <div className="float-right ml-6 mb-4 w-32 sm:w-40">
-            <Image
-              src={withBasePath("/artwork/about/ina-portrait.jpg")}
-              alt="Ina Slein"
-              width={1800}
-              height={2400}
-              className="w-full h-auto"
-            />
-          </div>
-          <h2 className="font-display text-3xl sm:text-4xl leading-tight max-w-md">
-            Trained in New York. Working in Lake Worth, Florida.
-          </h2>
-          <div className="mt-8 space-y-5 text-ink-soft leading-relaxed max-w-md">
-            <p>
-              Ina Slein studied painting in New York City between 1975 and
-              1979, across Bard College, NYU, Parsons School of Design, and
-              the New York Studio School.
-            </p>
-            <p>
-              It was the Studio School that proved foundational. There, she
-              trained under Mercedes Matter, Nicolas Carone, Paul Georges,
-              and Sidney Geist — a program built on relentless practice.
-              &ldquo;We were put to work drawing and painting endlessly,
-              without interruption,&rdquo; she recalls.
-            </p>
-            <p>
-              That discipline still shapes the way she paints portraits
-              today: closely observed, built up in sessions, and unhurried.
-            </p>
-          </div>
-
-          <div className="mt-10 border-t border-ink/10 pt-8 max-w-md">
-            <h3 className="font-display text-xl">Virtual Instruction</h3>
-            <p className="text-ink-soft mt-3 leading-relaxed">
-              Private art instruction is available via Zoom, for students at
-              any level who want focused, one-on-one feedback from a
-              working painter.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <Image
-            src={withBasePath(FEATURED_PIECE.image)}
-            alt={FEATURED_PIECE.title ?? "Painting by Ina Slein"}
-            width={FEATURED_PIECE.width}
-            height={FEATURED_PIECE.height}
-            className="w-full h-auto"
-          />
-          <MuseumLabel
-            title={FEATURED_PIECE.title}
-            medium={FEATURED_PIECE.medium}
-            dimensions={FEATURED_PIECE.dimensions}
-            className="mt-4"
-          />
-          <p className="text-ink-soft mt-6 leading-relaxed italic font-display text-lg">
-            &ldquo;I slowly slipped into the pond. The water was ice cold.
-            Its surface, however, was warm. I felt immediate relief from the
-            summer heat. I was floating&rdquo; — thoughts drifting &ldquo;out
-            of the pond, beyond mountains and into the sky.&rdquo;
+          <p className="utility-label">About</p>
+          <h1>Ina Slein</h1>
+          <p className="lead-copy">
+            Ina is a painter interested in the person beyond appearance: the histories, gestures,
+            private details, and relationships that make a likeness feel inhabited.
           </p>
         </div>
-      </div>
-    </section>
+        {studioPortrait && (
+          <figure className="about-portrait">
+            <ArtworkImage artwork={studioPortrait} variant="display" priority />
+            <figcaption>Ina Slein in the studio</figcaption>
+          </figure>
+        )}
+      </header>
+
+      <section className="prose-section">
+        <p className="section-label">Learning to look</p>
+        <div className="prose-copy">
+          <h2>An early habit of attention</h2>
+          <p>
+            Art entered Ina&apos;s life early. Formal instruction began when she was young, while visits
+            to museums with her mother made looking at paintings part of ordinary life. Those first
+            experiences established a lasting interest in how a figure can carry emotion without
+            explaining it outright.
+          </p>
+          <p>
+            From 1975 to 1979, she studied painting at Bard College, New York University, the New York
+            Studio School of Drawing, Painting and Sculpture, and Parsons School of Design. At the
+            Studio School, she worked with Mercedes Matter, Nicolas Carone, Paul Georges, and Sidney Geist.
+          </p>
+        </div>
+      </section>
+
+      <section className="prose-section">
+        <p className="section-label">A practice resumed</p>
+        <div className="prose-copy">
+          <h2>Family history brought painting forward again</h2>
+          <p>
+            After her years of study, painting continued in intervals rather than along a conventional
+            institutional career. Portraits of her own family and their bakery gradually became a way
+            to gather separate memories, photographs, and generations into a single image.
+          </p>
+          <p>
+            That work led to commissions. The same method still shapes her larger group portraits:
+            conversation first, then sustained research into the people, the period, the setting, and
+            the subtle alignments between one figure and another.
+          </p>
+        </div>
+      </section>
+
+      {mindFloat && (
+        <section className="about-artwork-section">
+          <ArtworkImage artwork={mindFloat} variant="display" />
+          <div>
+            <p className="section-label">The wider practice</p>
+            <h2>Memory can be a subject, too</h2>
+            <p>
+              Portraiture is central, but the studio also holds works drawn from place, sensation, and
+              remembered experience. Across them, observation is a beginning rather than an end.
+            </p>
+          </div>
+        </section>
+      )}
+
+      <section className="prose-section final-prose-section">
+        <p className="section-label">Working method</p>
+        <div className="prose-copy">
+          <h2>Conversation, research, and scale</h2>
+          <p>
+            Ina works from life, photographs, interviews, and archival material. A painting may begin
+            with a face, an animal, or a family occasion, but its structure develops through what she
+            learns about the subject. Large canvases allow those relationships to remain visible at the
+            scale of the room in which the work will live.
+          </p>
+        </div>
+      </section>
+    </article>
   );
 }

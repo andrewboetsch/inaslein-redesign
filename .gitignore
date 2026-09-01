@@ -20,6 +20,9 @@
 # production
 /build
 
+# private artwork masters and source interview material
+/private-intake/
+
 # misc
 .DS_Store
 *.pem

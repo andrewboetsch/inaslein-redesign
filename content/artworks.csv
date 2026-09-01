@@ -1,0 +1,24 @@
+slug,category,title,alt,source,year,medium,dimensions,caption,story,featured,order,publish,approval
+schachtel-bakery,family-histories,Schachtel's Bakery,A painted family scene outside Schachtel's Bakery at night,family/schachtel-bakery.jpg,,Acrylic on canvas,36 × 48 in.,Family history painting,"The painting gathers a family enterprise and several generations into one remembered place.||Ina developed the scene from family accounts and archival reference rather than treating the source photographs as a fixed composition.",yes,1,yes,approved
+schachtel-family-dinner,family-histories,Schachtel Family Dinner,A large painted family gathering around a dinner table,family/schachtel-dinner-1932.jpg,,Acrylic on canvas,36 × 48 in.,Commissioned group portrait,"The work was shaped through family interviews and period research. Clothing, hairstyles, gestures, and the distances between figures help describe how the family related to one another.",no,2,yes,approved
+self-portrait,portraits,Self-Portrait,Expressive painted self-portrait of Ina Slein,portraits/self-portrait.jpg,,,,,,no,10,yes,approved
+adolph,portraits,Adolph,Painted standing portrait of a man against a pale ground,portraits/adolph.jpg,,,,,,no,20,yes,approved
+marcia,portraits,Marcia,Painted portrait of a seated woman in a blue dress,portraits/marcia.jpg,,,,,,no,30,yes,approved
+bella,portraits,Bella,Painted portrait of a seated person in a dark jacket against a blue field,portraits/bella.jpg,,,,,,no,40,yes,approved
+mary-and-mikey,portraits,Mary and Mikey,Painted portrait of a seated woman with a small white dog,portraits/mary-and-mikey.jpg,,,,,,no,50,yes,approved
+g-and-a,portraits,G. & A.,Painted double portrait of two figures standing together in an interior,portraits/g-and-a.jpg,,,,,,no,60,yes,approved
+seated-man,portraits,,Painted portrait of an older seated man with one hand raised,portraits/img-0045.jpg,,,,,,no,70,yes,approved
+inside-the-bakery,portraits,,Painted scene of a figure working inside a bakery kitchen,portraits/bakery.jpg,,,,,,no,80,yes,approved
+two-small-dogs,equestrian-animals,,Drawing of two small dogs peering from a patterned basket,animals/img-0249.jpg,,,,,,no,10,yes,approved
+dog-at-rest,equestrian-animals,,Drawing of a long-haired dog resting outdoors,animals/img-0458.jpg,,,,,,no,20,yes,approved
+small-terrier,equestrian-animals,,Portrait drawing of a small terrier,animals/img-0556.jpg,,,,,,no,30,yes,approved
+two-sighthounds,equestrian-animals,,Drawing of two slender dogs standing together,animals/img-7671.jpg,,,,,,no,40,yes,approved
+equestrian-process-01,studio,Equestrian portrait in progress,Early compositional stage of a large equestrian painting,in-progress/img-6035.jpg,,,,Studio documentation,,no,10,yes,approved
+equestrian-process-02,studio,Equestrian portrait in progress,Developing stage of a large equestrian painting with a horse and handler,in-progress/img-6245.jpg,,,,Studio documentation,,no,20,yes,approved
+equestrian-process-03,studio,Equestrian portrait in progress,Layered working stage of a large equestrian painting,in-progress/img-6290.jpg,,,,Studio documentation,,no,30,yes,approved
+equestrian-process-04,studio,Equestrian portrait in progress,Color development in a large equestrian painting,in-progress/img-6886.jpg,,,,Studio documentation,,no,40,yes,approved
+equestrian-process-05,studio,Equestrian portrait in progress,Later working stage of a large equestrian painting,in-progress/img-7020.jpg,,,,Studio documentation,,no,50,yes,approved
+equestrian-process-06,studio,Equestrian portrait in progress,Near-complete working stage of a large equestrian painting,in-progress/img-7539.jpg,,,,Studio documentation,,no,60,yes,approved
+ina-in-studio,site,Ina Slein in her studio,Ina Slein standing beside a large painting in her studio,about/ina-portrait.jpg,,,,,,no,10,yes,approved
+mind-float,site,Mind Float,Abstract landscape painting in layered blue and earth colors,about/mind-float.jpg,,Acrylic on canvas,36 × 48 in.,,,no,20,yes,approved
+mambo,studio,Mambo,Portrait-format detail of a horse painting in progress,in-progress/img-7414.jpg,,,,,,no,999,no,needs-confirmation

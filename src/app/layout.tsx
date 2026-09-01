@@ -1,42 +1,44 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
-import { SiteHeader } from "@/components/SiteHeader";
-import { SiteFooter } from "@/components/SiteFooter";
+import "@fontsource-variable/bodoni-moda";
+import "@fontsource-variable/manrope";
 import { LocalBusinessSchema } from "@/components/LocalBusinessSchema";
+import { SiteNavigation } from "@/components/SiteNavigation";
+import { getAvailableCategories } from "@/lib/artworks";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Ina Slein | Portrait Artist & Painter, Lake Worth, FL",
-  description:
-    "Ina Slein is a portrait artist based in Lake Worth, Florida, serving the Palm Beach area — painting commissioned portraits, family groups, and animal companions, and teaching private art instruction via Zoom.",
+  metadataBase: new URL("https://inaslein.com"),
+  title: {
+    default: "Ina Slein | Painter",
+    template: "%s | Ina Slein",
+  },
+  description: "Paintings by Ina Slein, including commissioned portraits, family histories, and animal subjects.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Ina Slein | Painter",
+    description: "Portraits, family histories, and paintings from the studio archive.",
+    type: "website",
+    url: "/",
+    images: [{ url: "/artwork/generated/schachtel-bakery-display.webp", width: 1600, height: 1193 }],
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const categories = getAvailableCategories().map((item) => ({
+    href: item.href,
+    label: item.shortLabel,
+    count: item.count,
+  }));
+
   return (
-    <html
-      lang="en"
-      className={`${fraunces.variable} ${inter.variable} h-full`}
-    >
-      <body className="min-h-full flex flex-col bg-wall text-ink font-sans">
+    <html lang="en">
+      <body>
+        <a className="skip-link" href="#main-content">Skip to content</a>
         <LocalBusinessSchema />
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
+        <div className="site-frame">
+          <SiteNavigation categories={categories} />
+          <main id="main-content" className="site-main">{children}</main>
+        </div>
       </body>
     </html>
   );

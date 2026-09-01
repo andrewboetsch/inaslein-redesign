@@ -1,0 +1,567 @@
+[
+  {
+    "slug": "two-small-dogs",
+    "category": "equestrian-animals",
+    "alt": "Drawing of two small dogs peering from a patterned basket",
+    "featured": false,
+    "order": 10,
+    "width": 1434,
+    "height": 2560,
+    "orientation": "portrait",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/two-small-dogs-thumb.avif",
+        "webp": "/artwork/generated/two-small-dogs-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/two-small-dogs-display.avif",
+        "webp": "/artwork/generated/two-small-dogs-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/two-small-dogs-full.avif",
+        "webp": "/artwork/generated/two-small-dogs-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "dog-at-rest",
+    "category": "equestrian-animals",
+    "alt": "Drawing of a long-haired dog resting outdoors",
+    "featured": false,
+    "order": 20,
+    "width": 1800,
+    "height": 1257,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/dog-at-rest-thumb.avif",
+        "webp": "/artwork/generated/dog-at-rest-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/dog-at-rest-display.avif",
+        "webp": "/artwork/generated/dog-at-rest-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/dog-at-rest-full.avif",
+        "webp": "/artwork/generated/dog-at-rest-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "small-terrier",
+    "category": "equestrian-animals",
+    "alt": "Portrait drawing of a small terrier",
+    "featured": false,
+    "order": 30,
+    "width": 1795,
+    "height": 2560,
+    "orientation": "portrait",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/small-terrier-thumb.avif",
+        "webp": "/artwork/generated/small-terrier-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/small-terrier-display.avif",
+        "webp": "/artwork/generated/small-terrier-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/small-terrier-full.avif",
+        "webp": "/artwork/generated/small-terrier-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "two-sighthounds",
+    "category": "equestrian-animals",
+    "alt": "Drawing of two slender dogs standing together",
+    "featured": false,
+    "order": 40,
+    "width": 1668,
+    "height": 2388,
+    "orientation": "portrait",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/two-sighthounds-thumb.avif",
+        "webp": "/artwork/generated/two-sighthounds-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/two-sighthounds-display.avif",
+        "webp": "/artwork/generated/two-sighthounds-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/two-sighthounds-full.avif",
+        "webp": "/artwork/generated/two-sighthounds-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "schachtel-bakery",
+    "category": "family-histories",
+    "title": "Schachtel's Bakery",
+    "alt": "A painted family scene outside Schachtel's Bakery at night",
+    "medium": "Acrylic on canvas",
+    "dimensions": "36 × 48 in.",
+    "caption": "Family history painting",
+    "story": [
+      "The painting gathers a family enterprise and several generations into one remembered place.",
+      "Ina developed the scene from family accounts and archival reference rather than treating the source photographs as a fixed composition."
+    ],
+    "featured": true,
+    "order": 1,
+    "width": 1800,
+    "height": 1342,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/schachtel-bakery-thumb.avif",
+        "webp": "/artwork/generated/schachtel-bakery-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/schachtel-bakery-display.avif",
+        "webp": "/artwork/generated/schachtel-bakery-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/schachtel-bakery-full.avif",
+        "webp": "/artwork/generated/schachtel-bakery-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "schachtel-family-dinner",
+    "category": "family-histories",
+    "title": "Schachtel Family Dinner",
+    "alt": "A large painted family gathering around a dinner table",
+    "medium": "Acrylic on canvas",
+    "dimensions": "36 × 48 in.",
+    "caption": "Commissioned group portrait",
+    "story": [
+      "The work was shaped through family interviews and period research. Clothing, hairstyles, gestures, and the distances between figures help describe how the family related to one another."
+    ],
+    "featured": false,
+    "order": 2,
+    "width": 1800,
+    "height": 1354,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/schachtel-family-dinner-thumb.avif",
+        "webp": "/artwork/generated/schachtel-family-dinner-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/schachtel-family-dinner-display.avif",
+        "webp": "/artwork/generated/schachtel-family-dinner-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/schachtel-family-dinner-full.avif",
+        "webp": "/artwork/generated/schachtel-family-dinner-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "self-portrait",
+    "category": "portraits",
+    "title": "Self-Portrait",
+    "alt": "Expressive painted self-portrait of Ina Slein",
+    "featured": false,
+    "order": 10,
+    "width": 1800,
+    "height": 2278,
+    "orientation": "portrait",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/self-portrait-thumb.avif",
+        "webp": "/artwork/generated/self-portrait-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/self-portrait-display.avif",
+        "webp": "/artwork/generated/self-portrait-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/self-portrait-full.avif",
+        "webp": "/artwork/generated/self-portrait-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "adolph",
+    "category": "portraits",
+    "title": "Adolph",
+    "alt": "Painted standing portrait of a man against a pale ground",
+    "featured": false,
+    "order": 20,
+    "width": 328,
+    "height": 459,
+    "orientation": "portrait",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/adolph-thumb.avif",
+        "webp": "/artwork/generated/adolph-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/adolph-display.avif",
+        "webp": "/artwork/generated/adolph-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/adolph-full.avif",
+        "webp": "/artwork/generated/adolph-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "marcia",
+    "category": "portraits",
+    "title": "Marcia",
+    "alt": "Painted portrait of a seated woman in a blue dress",
+    "featured": false,
+    "order": 30,
+    "width": 1116,
+    "height": 1564,
+    "orientation": "portrait",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/marcia-thumb.avif",
+        "webp": "/artwork/generated/marcia-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/marcia-display.avif",
+        "webp": "/artwork/generated/marcia-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/marcia-full.avif",
+        "webp": "/artwork/generated/marcia-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "bella",
+    "category": "portraits",
+    "title": "Bella",
+    "alt": "Painted portrait of a seated person in a dark jacket against a blue field",
+    "featured": false,
+    "order": 40,
+    "width": 1058,
+    "height": 1576,
+    "orientation": "portrait",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/bella-thumb.avif",
+        "webp": "/artwork/generated/bella-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/bella-display.avif",
+        "webp": "/artwork/generated/bella-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/bella-full.avif",
+        "webp": "/artwork/generated/bella-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "mary-and-mikey",
+    "category": "portraits",
+    "title": "Mary and Mikey",
+    "alt": "Painted portrait of a seated woman with a small white dog",
+    "featured": false,
+    "order": 50,
+    "width": 1466,
+    "height": 1058,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/mary-and-mikey-thumb.avif",
+        "webp": "/artwork/generated/mary-and-mikey-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/mary-and-mikey-display.avif",
+        "webp": "/artwork/generated/mary-and-mikey-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/mary-and-mikey-full.avif",
+        "webp": "/artwork/generated/mary-and-mikey-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "g-and-a",
+    "category": "portraits",
+    "title": "G. & A.",
+    "alt": "Painted double portrait of two figures standing together in an interior",
+    "featured": false,
+    "order": 60,
+    "width": 811,
+    "height": 1213,
+    "orientation": "portrait",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/g-and-a-thumb.avif",
+        "webp": "/artwork/generated/g-and-a-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/g-and-a-display.avif",
+        "webp": "/artwork/generated/g-and-a-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/g-and-a-full.avif",
+        "webp": "/artwork/generated/g-and-a-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "seated-man",
+    "category": "portraits",
+    "alt": "Painted portrait of an older seated man with one hand raised",
+    "featured": false,
+    "order": 70,
+    "width": 1800,
+    "height": 1756,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/seated-man-thumb.avif",
+        "webp": "/artwork/generated/seated-man-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/seated-man-display.avif",
+        "webp": "/artwork/generated/seated-man-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/seated-man-full.avif",
+        "webp": "/artwork/generated/seated-man-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "inside-the-bakery",
+    "category": "portraits",
+    "alt": "Painted scene of a figure working inside a bakery kitchen",
+    "featured": false,
+    "order": 80,
+    "width": 1777,
+    "height": 1182,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/inside-the-bakery-thumb.avif",
+        "webp": "/artwork/generated/inside-the-bakery-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/inside-the-bakery-display.avif",
+        "webp": "/artwork/generated/inside-the-bakery-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/inside-the-bakery-full.avif",
+        "webp": "/artwork/generated/inside-the-bakery-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "ina-in-studio",
+    "category": "site",
+    "title": "Ina Slein in her studio",
+    "alt": "Ina Slein standing beside a large painting in her studio",
+    "featured": false,
+    "order": 10,
+    "width": 1800,
+    "height": 2400,
+    "orientation": "portrait",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/ina-in-studio-thumb.avif",
+        "webp": "/artwork/generated/ina-in-studio-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/ina-in-studio-display.avif",
+        "webp": "/artwork/generated/ina-in-studio-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/ina-in-studio-full.avif",
+        "webp": "/artwork/generated/ina-in-studio-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "mind-float",
+    "category": "site",
+    "title": "Mind Float",
+    "alt": "Abstract landscape painting in layered blue and earth colors",
+    "medium": "Acrylic on canvas",
+    "dimensions": "36 × 48 in.",
+    "featured": false,
+    "order": 20,
+    "width": 1800,
+    "height": 1365,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/mind-float-thumb.avif",
+        "webp": "/artwork/generated/mind-float-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/mind-float-display.avif",
+        "webp": "/artwork/generated/mind-float-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/mind-float-full.avif",
+        "webp": "/artwork/generated/mind-float-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "equestrian-process-01",
+    "category": "studio",
+    "title": "Equestrian portrait in progress",
+    "alt": "Early compositional stage of a large equestrian painting",
+    "caption": "Studio documentation",
+    "featured": false,
+    "order": 10,
+    "width": 1800,
+    "height": 1182,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/equestrian-process-01-thumb.avif",
+        "webp": "/artwork/generated/equestrian-process-01-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/equestrian-process-01-display.avif",
+        "webp": "/artwork/generated/equestrian-process-01-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/equestrian-process-01-full.avif",
+        "webp": "/artwork/generated/equestrian-process-01-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "equestrian-process-02",
+    "category": "studio",
+    "title": "Equestrian portrait in progress",
+    "alt": "Developing stage of a large equestrian painting with a horse and handler",
+    "caption": "Studio documentation",
+    "featured": false,
+    "order": 20,
+    "width": 1800,
+    "height": 1234,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/equestrian-process-02-thumb.avif",
+        "webp": "/artwork/generated/equestrian-process-02-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/equestrian-process-02-display.avif",
+        "webp": "/artwork/generated/equestrian-process-02-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/equestrian-process-02-full.avif",
+        "webp": "/artwork/generated/equestrian-process-02-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "equestrian-process-03",
+    "category": "studio",
+    "title": "Equestrian portrait in progress",
+    "alt": "Layered working stage of a large equestrian painting",
+    "caption": "Studio documentation",
+    "featured": false,
+    "order": 30,
+    "width": 1800,
+    "height": 1188,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/equestrian-process-03-thumb.avif",
+        "webp": "/artwork/generated/equestrian-process-03-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/equestrian-process-03-display.avif",
+        "webp": "/artwork/generated/equestrian-process-03-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/equestrian-process-03-full.avif",
+        "webp": "/artwork/generated/equestrian-process-03-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "equestrian-process-04",
+    "category": "studio",
+    "title": "Equestrian portrait in progress",
+    "alt": "Color development in a large equestrian painting",
+    "caption": "Studio documentation",
+    "featured": false,
+    "order": 40,
+    "width": 1800,
+    "height": 1194,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/equestrian-process-04-thumb.avif",
+        "webp": "/artwork/generated/equestrian-process-04-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/equestrian-process-04-display.avif",
+        "webp": "/artwork/generated/equestrian-process-04-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/equestrian-process-04-full.avif",
+        "webp": "/artwork/generated/equestrian-process-04-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "equestrian-process-05",
+    "category": "studio",
+    "title": "Equestrian portrait in progress",
+    "alt": "Later working stage of a large equestrian painting",
+    "caption": "Studio documentation",
+    "featured": false,
+    "order": 50,
+    "width": 1800,
+    "height": 1144,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/equestrian-process-05-thumb.avif",
+        "webp": "/artwork/generated/equestrian-process-05-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/equestrian-process-05-display.avif",
+        "webp": "/artwork/generated/equestrian-process-05-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/equestrian-process-05-full.avif",
+        "webp": "/artwork/generated/equestrian-process-05-full.webp"
+      }
+    }
+  },
+  {
+    "slug": "equestrian-process-06",
+    "category": "studio",
+    "title": "Equestrian portrait in progress",
+    "alt": "Near-complete working stage of a large equestrian painting",
+    "caption": "Studio documentation",
+    "featured": false,
+    "order": 60,
+    "width": 1800,
+    "height": 1150,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/equestrian-process-06-thumb.avif",
+        "webp": "/artwork/generated/equestrian-process-06-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/equestrian-process-06-display.avif",
+        "webp": "/artwork/generated/equestrian-process-06-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/equestrian-process-06-full.avif",
+        "webp": "/artwork/generated/equestrian-process-06-full.webp"
+      }
+    }
+  }
+]

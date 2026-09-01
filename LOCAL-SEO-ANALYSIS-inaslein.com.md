@@ -1,7 +1,7 @@
 # Local SEO Analysis — inaslein.com
 
 **Date:** 2026-07-27
-**Prepared for:** Ina Slein (portrait artist / painting instructor), West Palm Beach / Lake Worth, FL
+**Prepared for:** Ina Slein (portrait artist), Palm Beach County, FL
 **Purpose:** GBP-readiness audit ahead of creating a Google Business Profile listing
 
 ## Local SEO Score: 21/100
@@ -19,8 +19,8 @@ This is a low score, which is normal and expected for a business that hasn't set
 
 ## Business Type & Vertical
 
-- **Type: Hybrid, but should be configured as a Service Area Business (SAB) with hidden address.** A real home address exists in at least one public citation (see NAP audit), but the work itself — portrait commissions and private art instruction — is delivered virtually (Zoom) or off-site. This is the standard, correct GBP setup for a home-based solo practice: verify with the real address, then hide it and publish a service area instead of a storefront pin.
-- **Vertical: Artist / Private Art Instruction.** Doesn't cleanly match any of the standard verticals (restaurant, healthcare, legal, home services, real estate, automotive) — treat as generic local service business with two distinct offerings: (1) portrait commissions, (2) private art instruction.
+- **Type: Service Area Business (SAB) with hidden address.** The practice is home-based and portrait commissions do not require publishing a storefront location.
+- **Vertical: Artist / commissioned portrait painting.** Treat the practice as a local creative service business centered on commissioned portrait work.
 
 ## Critical Finding: NAP Conflict
 
@@ -29,21 +29,21 @@ The live site (inaslein.com) and an existing public citation disagree on two of 
 | Field | inaslein.com (live site) | Nextdoor citation (found via search) |
 |---|---|---|
 | Name | Ina Slein | Ina Slein Artist |
-| Address | *(none shown — just "West Palm Beach")* | **10327 N Andover Coach Ln, Lake Worth, FL 33449** |
+| Address | *(none shown — just "West Palm Beach")* | **Private home address withheld** |
 | Phone | *(none shown anywhere on the site)* | **(561) 632-8055** |
 
 Source: [Ina Slein Artist – Lake Worth, FL – Nextdoor](https://nextdoor.com/pages/ina-slein-artist-lake-worth-fl/)
 
 **Why this matters right now:** Google cross-references exactly this kind of citation data when you create and verify a new Business Profile. Walking into GBP setup with the site claiming "West Palm Beach" and no phone, while a live citation says Lake Worth + a real phone number, is the single most common cause of stuck/rejected verifications and inconsistent map-pack placement. This needs to be resolved — pick the one correct, current NAP — **before** the GBP listing is created, not after.
 
-**Action needed from Ina before proceeding:** confirm (a) is 10327 N Andover Coach Ln, Lake Worth, FL 33449 still current, (b) is (561) 632-8055 still her number, (c) whether she wants the address public (storefront/studio visits) or hidden (service-area only, recommended for a home studio). I did not find an existing Google Business Profile in search results, so this looks like a first-time setup, not a duplicate-listing situation — worth a quick manual check in Google Maps for "Ina Slein" before creating a new listing, just to be certain.
+**Current launch decision:** keep the home address private and publish only Palm Beach County as the service area. The public phone number should be reconfirmed before final production approval.
 
 ## GBP Optimization Checklist
 
 | Item | Status |
 |---|---|
 | Business exists in Google Maps already | Not found in search — looks clear to create new |
-| Primary category chosen correctly | N/A yet — **this is the #1 local-pack ranking factor**, get it right first. Candidates to check in the GBP picker: "Art School" (if instruction is the lead offering) vs. an artist/portrait-specific category if Google's current picker offers one closer to commissioned portrait work. Pick based on which service she wants to rank for first — don't try to cover both equally in one primary category. |
+| Primary category chosen correctly | N/A yet — select the closest current artist or portrait-painting category available in the GBP picker. |
 | NAP finalized | **Blocked on the conflict above** |
 | Service area vs. address visibility decided | Recommend hidden address + service area (Palm Beach County) given home-based, largely virtual/off-site delivery |
 | Business hours | None published anywhere — decide what to show (even "by appointment" is better than nothing) |
@@ -54,7 +54,7 @@ Source: [Ina Slein Artist – Lake Worth, FL – Nextdoor](https://nextdoor.com/
 
 - **Google reviews:** none (no listing yet).
 - **Third-party signal:** Nextdoor page has qualitative neighbor testimonials ("a kind and patient, talented artist") but no numeric rating/count surfaced.
-- No review-gating risk currently, since there's no review flow yet — worth building the habit of asking happy commission clients/students for a Google review as soon as the listing goes live, aiming for steady trickle rather than a one-time batch (18-day rule: rankings benefit from consistent recency, not a single burst).
+- No review-gating risk currently, since there is no review flow yet. Ask satisfied commission clients for reviews only after a verified profile is established.
 
 ## NAP Consistency & Citations
 
@@ -73,7 +73,7 @@ Source: [Ina Slein Artist – Lake Worth, FL – Nextdoor](https://nextdoor.com/
 - **In-progress redesign (~/inaslein-redesign):** also has no LocalBusiness schema yet. Recommend adding before launch:
   - A `LocalBusiness` block (or `Person` for Ina + `LocalBusiness` for the practice) in `src/app/layout.tsx`, populated with the **confirmed** name/phone/address-or-areaServed once that's settled — do not fill in placeholder data.
   - `areaServed` listing Palm Beach County / relevant cities if going the hidden-address SAB route.
-  - Two `Service` entries under it: portrait commissions and private art instruction.
+  - A `Service` entry for portrait commissions.
   - `sameAs` linking to whatever profiles get created (GBP, Nextdoor, any social).
   - Don't add `aggregateRating` until there are real Google reviews to reflect — a placeholder rating here would be a fake-signal problem, not a shortcut.
 
@@ -82,7 +82,7 @@ Source: [Ina Slein Artist – Lake Worth, FL – Nextdoor](https://nextdoor.com/
 - **Title tags today:** "Ina Slein", "Welcome", "Portrait Gallery", "Family Portraits", "Animals We Love", "In Progress" — none carry city or service keywords. The redesign already does better here (e.g. `"Portrait Gallery | Ina Slein"`), but still doesn't include the city — worth adding once NAP/service-area is confirmed, e.g. `"Portrait Artist in West Palm Beach, FL | Ina Slein"`.
 - **Meta descriptions:** empty on every page of the live site. The redesign has real per-page descriptions already (a genuine improvement), but none currently name a city — same fix as above.
 - **NAP visibility:** live site shows name + city only, no phone, no address/service-area statement. The redesign's footer (`src/components/SiteFooter.tsx`) currently matches that same gap — same city-only text, no phone.
-- **Dedicated pages per offering:** portrait commissions and private instruction are both mentioned, but neither has its own page — Whitespark's #1 local organic ranking factor is a dedicated page per service. Given the redesign already separates gallery types by page, a `/instruction` (or similar) page describing the Zoom lesson offering specifically would be a natural, low-effort addition.
+- **Dedicated offering content:** the Contact page now explains how a portrait conversation begins without creating thin promotional service pages.
 - **Click-to-call:** impossible right now since there's no phone number anywhere. Add a `tel:` link once the number is confirmed.
 
 ## Local Link & Authority Signals
@@ -100,7 +100,7 @@ Source: [Ina Slein Artist – Lake Worth, FL – Nextdoor](https://nextdoor.com/
 5. **High** — Add `LocalBusiness`/`Person`/`Service` schema to the redesign (`src/app/layout.tsx`) once NAP is confirmed — currently absent entirely.
 6. **High** — Update the Nextdoor listing to match the new confirmed NAP exactly.
 7. **Medium** — Add city + service keywords to page titles and meta descriptions across the redesign (e.g. "Portrait Artist in [City], FL").
-8. **Medium** — Build a dedicated page for private art instruction, separate from the portrait galleries, once the site structure supports it.
+8. **Withheld** — Do not promote private instruction unless Ina explicitly reconfirms that offering.
 9. **Medium** — Start a steady review-request habit as soon as the GBP listing is live (aim for a trickle over time, not a one-time push).
 10. **Low** — After GBP is stable, claim Bing Places (feeds ChatGPT/Copilot/Alexa) and Apple Business Connect, and pursue one or two "best local art instructor/portrait artist" roundup placements.
 

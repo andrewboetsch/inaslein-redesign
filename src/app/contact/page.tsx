@@ -1,60 +1,47 @@
 import type { Metadata } from "next";
-import { PaletteMark } from "@/components/PaletteMark";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Contact | Ina Slein",
-  description:
-    "Reach Ina Slein by phone or email to inquire about a portrait commission or private virtual art instruction.",
+  title: "Contact",
+  description: "Contact Ina Slein to discuss a portrait, family, or animal commission.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
   return (
-    <section className="mx-auto max-w-3xl px-6 sm:px-10 py-20">
-      <div className="flex items-center gap-4 mb-4">
-        <PaletteMark size={22} />
-        <h1 className="label-caps text-xs text-ink-soft">Contact</h1>
-      </div>
-      <h2 className="font-display text-3xl sm:text-4xl max-w-md mb-4">
-        Let&rsquo;s talk about a portrait, or a lesson.
-      </h2>
-      <p className="text-ink-soft max-w-md mb-14 leading-relaxed">
-        Based in {BUSINESS.cityDisplay}, serving the Palm Beach area.
-        Portrait commissions and private instruction are available in
-        person or by video call — reach out directly by phone or email.
-      </p>
+    <article className="contact-page">
+      <header className="page-heading contact-heading">
+        <p className="utility-label">Contact</p>
+        <h1>Begin with a conversation.</h1>
+        <p>
+          To discuss a portrait or another commissioned painting, contact Ina directly. The first
+          conversation can cover the subject, the reason for the work, available source material,
+          approximate scale, and where the painting will live.
+        </p>
+      </header>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 border-t border-ink/10 pt-10">
+      <dl className="contact-details">
         <div>
-          <p className="label-caps text-xs text-ink-soft mb-2">Phone</p>
-          <a
-            href={`tel:${BUSINESS.telephone}`}
-            className="font-display text-xl text-ink hover:text-venetian transition-colors"
-          >
-            {BUSINESS.telephoneDisplay}
-          </a>
+          <dt>Email</dt>
+          <dd><a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a></dd>
         </div>
         <div>
-          <p className="label-caps text-xs text-ink-soft mb-2">Email</p>
-          <a
-            href={`mailto:${BUSINESS.email}`}
-            className="font-display text-xl text-ink hover:text-venetian transition-colors break-all"
-          >
-            {BUSINESS.email}
-          </a>
+          <dt>Telephone</dt>
+          <dd><a href={`tel:${BUSINESS.telephone}`}>{BUSINESS.telephoneDisplay}</a></dd>
         </div>
         <div>
-          <p className="label-caps text-xs text-ink-soft mb-2">Location</p>
-          <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BUSINESS.city + " " + BUSINESS.state)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-display text-xl text-ink hover:text-venetian transition-colors"
-          >
-            {BUSINESS.cityDisplay}
-          </a>
+          <dt>Studio</dt>
+          <dd>Palm Beach County, Florida</dd>
         </div>
-      </div>
-    </section>
+      </dl>
+
+      <section className="contact-note">
+        <p className="section-label">Helpful at the beginning</p>
+        <p>
+          A photograph, a family account, the dimensions of the intended room, or simply the reason
+          the painting matters can be enough to begin.
+        </p>
+      </section>
+    </article>
   );
 }

@@ -1,61 +1,71 @@
-# Ina Slein — Site Redesign
+# Ina Slein — Static Artist Site
 
-A rebuild of [inaslein.com](https://inaslein.com) (currently a GoDaddy-builder site) in Next.js. Ina Slein is a portrait artist based in Lake Worth, FL, serving the Palm Beach area — painting commissioned portraits, family groups, and animal companions, and teaching private art instruction via Zoom.
+A static, repository-managed artist site for Ina Slein. The design follows the approved white, artwork-first direction: persistent left navigation on desktop, an accessible drawer on mobile, route-backed collections, and an in-page artwork viewer.
 
-## Preview deploy
+No CMS, database, runtime API, prices, or contact form are used. The production domain remains `inaslein.com`; the current GoDaddy site should stay live until Ina approves the content and a separate DNS cutover is authorized.
 
-Every push to `main` builds a static export and publishes it to GitHub Pages via `.github/workflows/deploy-pages.yml`:
-
-**https://v065q3mn.github.io/inaslein-redesign/**
-
-This is a preview/staging URL only, not the final production home. Because GitHub Pages serves plain static files with no Node server, the Pages build sets `output: "export"` and `images.unoptimized: true` in `next.config.ts` (only when the `GITHUB_PAGES` env var is set — local dev and any future custom-domain host are unaffected), and prefixes every asset path with `/inaslein-redesign` via `src/lib/basePath.ts`. None of that is needed once this moves to a real host (Vercel, or a custom domain) — at that point `next.config.ts` and the `withBasePath()` calls can be reverted to the plain paths.
-
-## NAP / local SEO
-
-Confirmed business name/address/phone lives in one place: `src/lib/business.ts`. It feeds the visible footer/contact info, the site's title/meta description, and the `LocalBusiness` JSON-LD schema (`src/components/LocalBusinessSchema.tsx`, rendered in `layout.tsx`). The full street address is real but intentionally **not** shown as visible page text — this is a home studio, so the address is schema-only (for GBP verification), while the public site just shows the city. See `LOCAL-SEO-ANALYSIS-inaslein.com.md` for the full local-SEO audit this was based on.
-
-## Design direction
-
-The site is styled as a **gallery wall**, not a generic portfolio template: a warm, neutral "gallery" background, ink-black text, and a recurring three-dot "palette" mark (venetian red / ultramarine / Naples yellow) as the one signature flourish. Every piece gets real museum-label typography (title, medium, dimensions, year). See `src/components/PaletteMark.tsx` and `src/components/MuseumLabel.tsx`.
-
-Typography: [Fraunces](https://fonts.google.com/specimen/Fraunces) (display/italic) paired with [Inter](https://fonts.google.com/specimen/Inter) (body/labels), loaded via `next/font/google` in `src/app/layout.tsx`.
-
-Color tokens live in `src/app/globals.css` as CSS custom properties (`--wall`, `--ink`, `--venetian`, `--ultramarine`, `--naples`) wired into Tailwind v4 via `@theme inline`.
-
-## Pages
+## Public routes
 
 | Route | Purpose |
 |---|---|
-| `/` | Home — hero, featured piece + artist statement excerpt, gallery teasers, commission/lesson CTA |
-| `/about` | Bio, training, artist statement, virtual instruction blurb |
-| `/gallery/portraits` | Portrait Gallery |
-| `/gallery/family` | Family Portraits |
-| `/gallery/animals` | Animals We Love |
-| `/gallery/in-progress` | In Progress (work still on the easel) |
-| `/contact` | Contact form (opens a pre-filled `mailto:`) + email/location |
+| `/` | Featured landscape painting and an uncropped visual index |
+| `/work/portraits` | Portraits |
+| `/work/family-histories` | Family history paintings |
+| `/work/equestrian-animals` | Equestrian and animal subjects |
+| `/work/studio` | Curated studio/process selection |
+| `/about` | Interview-led, paraphrased artist story |
+| `/cv` | Confirmed training, practice, and selected projects |
+| `/contact` | Public phone, email, and Palm Beach County location |
 
-Bio and artist-statement copy on `/` and `/about` was pulled from the live site's real content.
+Categories with no approved artwork are omitted from navigation and the sitemap. Legacy GoDaddy routes are represented as client-side fallback pages for GitHub Pages and as permanent redirects in `public/_redirects` for Cloudflare Pages.
 
-## Artwork photos
+## Artwork catalog and private masters
 
-All photos are real, pulled directly from the live inaslein.com (hosted on `img1.wsimg.com`/`isteam.wsimg.com`, GoDaddy's Website Builder image store) and saved locally under `public/artwork/`. `download-artwork.sh` is the exact script used to fetch them — re-run it (after updating the URL list) if Ina adds or replaces photos on the live site before this redesign ships.
+The editorial source is `content/artworks.csv`; the application reads the generated, validated `content/artworks.generated.json`. Only rows with `publish=yes`, `approval=approved`, and non-empty alt text are emitted.
 
-Gallery pieces are listed in `src/lib/artworks.ts`, each with its real `width`/`height` (so `next/image` can lay them out without shift) and, where actually known, a `title`/`caption`/`medium`/`dimensions`/`year`. Most pieces only have a filename to go on, so they're labeled `"Untitled"` rather than inventing details — **do not guess at medium/size/year; get them from Ina and fill in `artworks.ts` directly.** The Family Portraits page carries real captions (the Schachtel family/bakery story, Newark NJ) pulled from the live site's image alt text.
-
-`GalleryGrid` (`src/components/GalleryGrid.tsx`) lays pieces out as a CSS-columns masonry so each photo keeps its true aspect ratio, since real paintings don't share one crop ratio the way the old placeholder tiles did.
-
-## Next steps
-
-- Get real title/medium/dimensions/year for the `"Untitled"` pieces in `src/lib/artworks.ts` from Ina.
-- Wire the contact form to a real backend (Formspree, Resend, etc.) instead of the `mailto:` fallback in `src/components/ContactForm.tsx`.
-- Confirm final copy for the home hero line and CTA band with Ina.
-- Decide on a domain/hosting move off GoDaddy (Vercel is the natural fit for a Next.js app).
-- Consider compressing/re-encoding `public/artwork/` (currently ~20MB of source JPEGs) for production.
-
-## Development
+Original master photographs belong in the ignored `private-intake/masters/artwork/` directory or an equivalent private location supplied with `ARTWORK_SOURCE_ROOT`. They must never be committed. The importer creates metadata-free AVIF and WebP derivatives at thumbnail, display, and full-view sizes under `public/artwork/generated/`.
 
 ```bash
-npm run dev     # start dev server at localhost:3000
-npm run build   # production build
-npm run lint    # eslint
+npm run content:build
+npm run content:check
 ```
+
+The catalog build refuses duplicate or unsafe slugs, unsupported categories, missing source files, unapproved publication rows, and missing alt text. The content check verifies every generated asset, dimensions, approval state, unresolved placeholders, and EXIF/XMP/IPTC/GPS removal.
+
+Raw interview transcripts are not stored in this repository. `content/source-register.md` records only non-sensitive editorial provenance and approval status. All interview-led prose is paraphrased; no direct quotations, private-client names, unverified exhibitions, teaching promotion, prices, or home address are published.
+
+## Local development and verification
+
+Node 22 is the supported runtime. Fonts are stored as package assets rather than fetched during the build.
+
+```bash
+npm ci
+npm run dev
+npm run verify
+```
+
+`npm run verify` checks the catalog, linting, types, static production export, internal asset links, canonical metadata, redirect declarations, sitemap, robots file, and exported headers.
+
+## Review and deployment
+
+Pushes to `main` currently create the stakeholder preview on GitHub Pages using `.github/workflows/deploy-pages.yml`. The workflow sets the preview-only `/inaslein-redesign` base path and deploys `out/`.
+
+For the approved production candidate, connect this repository to Cloudflare Pages with:
+
+- Framework preset: Next.js (Static HTML Export)
+- Build command: `npm run build`
+- Build output directory: `out`
+- Node version: 22
+
+`wrangler.jsonc`, `public/_headers`, and `public/_redirects` capture the static output location, security/cache policy, and legacy route mappings. Validate the Cloudflare preview, TLS, redirects, caching, social previews, and phone-sized layouts before any DNS change.
+
+Production remains gated on Ina approving the curated artwork list, paraphrased About and story copy, CV facts, titles/dates, and any private-work permissions. A repository implementation or preview build is not production approval.
+
+## Recovering the superseded dark concept
+
+Before this direction replaced the dark gallery-wall concept, recoverable copies were saved outside the repository:
+
+- `/private/tmp/inaslein-dark-concept-2026-08-31.patch`
+- `/private/tmp/inaslein-dark-concept-2026-08-31.tgz`
+
+These are local machine backups, not deployment inputs.
