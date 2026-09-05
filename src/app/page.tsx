@@ -8,15 +8,58 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-export default function EntrancePage() {
+const HOME_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/work/", label: "Work" },
+  { href: "/about/", label: "About" },
+  { href: "/cv/", label: "CV" },
+  { href: "/contact/", label: "Contact" },
+];
+
+function HomepageLinks() {
+  return HOME_LINKS.map((item) => (
+    <Link
+      key={item.href}
+      href={item.href}
+      aria-current={item.href === "/" ? "page" : undefined}
+    >
+      {item.label}
+    </Link>
+  ));
+}
+
+export default function Homepage() {
   return (
-    <div className={styles.entrance}>
+    <div className={styles.homepage}>
+      <header className={styles.header}>
+        <Link href="/" className={styles.artistName} aria-current="page">
+          Ina Slein
+        </Link>
+        <p className={styles.domain}>inaslein.com</p>
+      </header>
+
+      <div className={styles.navigationBar}>
+        <nav className={styles.desktopNavigation} aria-label="Primary navigation">
+          <HomepageLinks />
+        </nav>
+        <details className={styles.mobileNavigation}>
+          <summary>
+            <span className={styles.menuIcon} aria-hidden="true">☰</span>
+            <span className="visually-hidden">Menu</span>
+          </summary>
+          <nav aria-label="Primary navigation">
+            <HomepageLinks />
+          </nav>
+        </details>
+        <p className={styles.mobileDomain}>inaslein.com</p>
+      </div>
+
       <div className={styles.artwork}>
         <picture>
           <source
             type="image/webp"
             srcSet={[640, 1280, 2400].map((width) => `${withBasePath(`/artwork/entrance/horse-${width}.webp`)} ${width}w`).join(", ")}
-            sizes="(max-width: 600px) calc(100vw - 32px), calc(100vw - 64px)"
+            sizes="100vw"
           />
           <img
             src={withBasePath("/artwork/entrance/horse-2400.webp")}
@@ -27,10 +70,6 @@ export default function EntrancePage() {
             fetchPriority="high"
           />
         </picture>
-      </div>
-      <div className={styles.caption}>
-        <h1>Ina Slein</h1>
-        <Link href="/work/" className={styles.enter}>Enter</Link>
       </div>
     </div>
   );
