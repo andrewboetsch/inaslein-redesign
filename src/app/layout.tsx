@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "@fontsource-variable/bodoni-moda";
 import "@fontsource-variable/manrope";
 import { LocalBusinessSchema } from "@/components/LocalBusinessSchema";
-import { SiteNavigation } from "@/components/SiteNavigation";
+import { SiteFrame } from "@/components/SiteFrame";
 import { getAvailableCategories } from "@/lib/artworks";
 import "./globals.css";
 
@@ -35,10 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <a className="skip-link" href="#main-content">Skip to content</a>
         <LocalBusinessSchema />
-        <div className="site-frame">
-          <SiteNavigation categories={categories} />
-          <main id="main-content" className="site-main">{children}</main>
-        </div>
+        <SiteFrame categories={categories}>{children}</SiteFrame>
       </body>
     </html>
   );

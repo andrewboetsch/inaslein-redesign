@@ -1,0 +1,74 @@
+.entrance {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  background: #fff;
+}
+
+.artwork {
+  display: flex;
+  justify-content: center;
+  min-height: 0;
+}
+
+.artwork picture {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.artwork img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100svh - 164px);
+  object-fit: contain;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 32px 8px;
+}
+
+.caption h1 {
+  margin: 0;
+  font-family: "Manrope Variable", sans-serif;
+  font-size: clamp(30px, 3.4vw, 50px);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.enter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 94px;
+  min-height: 46px;
+  padding: 12px 20px;
+  background: #11110f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.enter:hover {
+  background: #454541;
+}
+
+@media (max-width: 600px) {
+  .entrance { padding: 16px; }
+  .artwork img { max-height: calc(100svh - 140px); }
+  .caption { padding: 22px 0 0; gap: 16px; }
+  .caption h1 { font-size: clamp(27px, 7vw, 40px); }
+  .enter { min-width: 80px; padding: 12px 16px; }
+}

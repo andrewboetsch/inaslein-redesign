@@ -8,14 +8,14 @@ import { BUSINESS } from "@/lib/business";
 type CategoryLink = { href: string; label: string; count: number };
 
 const PRIMARY = [
-  { href: "/", label: "Work" },
+  { href: "/work", label: "Work" },
   { href: "/about", label: "About" },
   { href: "/cv", label: "CV" },
   { href: "/contact", label: "Contact" },
 ];
 
 function isActive(pathname: string, href: string) {
-  if (href === "/") return pathname === "/" || pathname.startsWith("/work/");
+  if (href === "/work") return pathname === "/work" || pathname.startsWith("/work/");
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
@@ -117,7 +117,7 @@ export function SiteNavigation({ categories }: { categories: CategoryLink[] }) {
   return (
     <>
       <aside className="site-sidebar" aria-label="Site navigation">
-        <Link href="/" className="site-name" aria-label="Ina Slein, work">Ina Slein</Link>
+        <Link href="/" className="site-name" aria-label="Ina Slein, entrance">Ina Slein</Link>
         <p className="site-discipline">Paintings</p>
         <NavList pathname={pathname} categories={categories} />
         <div className="sidebar-location">
@@ -127,7 +127,7 @@ export function SiteNavigation({ categories }: { categories: CategoryLink[] }) {
       </aside>
 
       <header className="mobile-header">
-        <Link href="/" className="mobile-name" aria-label="Ina Slein, work">Ina Slein</Link>
+        <Link href="/" className="mobile-name" aria-label="Ina Slein, entrance">Ina Slein</Link>
         <button
           ref={menuButtonRef}
           type="button"

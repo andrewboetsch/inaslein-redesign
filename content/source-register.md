@@ -18,8 +18,9 @@ This file records non-sensitive editorial provenance. Raw interview transcripts,
 | Schachtel's Bakery developed from family accounts and archival reference | Work viewer | Needs Ina approval | Interview recollection |
 | Red evening atmosphere in a later bakery painting represents the close of a generation | Work viewer | Needs Ina approval | Interview recollection |
 | Schachtel Family Dinner used interviews and period research | Work viewer | Needs Ina approval | Interview recollection |
-| Equestrian portrait story: escape from neglect, return near the original breeding farm, recovery with a companion mare, and Ina's visit before completing the work | Studio page | Needs Ina approval and final artwork confirmation | Interview recollection; private names omitted |
-| Mambo title, date, story, and public image permission | Withheld from narrative use | Needs confirmation | Interview recollection |
+| Mambo's Journey—Lost and Found: March 2025 rescue, return near the original breeding farm, recovery with a companion mare, Ina's October 2025 visit, and completion after nearly a year | Studio page | Approved by Ina for incorporation | Ina's written 2026 account supplied by Andrew on September 5, 2026; private names and addresses omitted |
+| Mambo title, 2026 completion date, and 4 × 6-foot dimensions | Studio page | Confirmed by Ina | Ina's written 2026 account supplied by Andrew on September 5, 2026 |
+| Public use of the completed Mambo image | Entrance page | Approved by Ina for the requested entrance | Completed image supplied by Andrew on September 5, 2026 |
 | Private instruction via Zoom | Not published | Withheld | Ina asked for it to be removed during the latest interview |
 | Exhibition and collection history | Not published | Needs documentation | Incomplete interview recollection |
 

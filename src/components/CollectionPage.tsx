@@ -18,26 +18,38 @@ export function CollectionPage({ category }: { category: ArtworkCategory }) {
         <section className="studio-journal" aria-labelledby="studio-journal-title">
           <div className="studio-journal-labels">
             <p className="section-label">Studio journal</p>
-            <p className="studio-status">Work in progress</p>
+            <p className="studio-status">Completed 2026</p>
           </div>
           <div className="studio-journal-copy">
-            <h2 id="studio-journal-title">A portrait shaped by return</h2>
+            <h2 id="studio-journal-title">Mambo&apos;s Journey—Lost and Found</h2>
             <p>
-              The equestrian portrait now taking shape in Ina&apos;s studio began with a thoroughbred
-              that had escaped neglect in Ontario, Canada. After traveling several miles, the horse appeared
-              near the land where it had been bred more than two decades earlier. An image shared
-              online helped reconnect it with the breeder who had known it at the beginning of its life.
+              In March 2025, Ina received two videos and a photograph from family in Ontario. A wet,
+              exhausted horse was running frantically across a field, slipping on an icy hill, and
+              falling. The people watching from the house could not yet tell where the horse had come
+              from or how to help her. Ina was in Florida, but the images would not leave her. She
+              ordered six-foot stretcher bars, canvas, and paint and began working immediately.
             </p>
             <p>
-              Ina began the painting from the story and the first images she received, then traveled
-              to meet the horse before resolving the work. At the farm, the horse stayed inside until
-              a companion mare came forward. The two had been paired during its recovery, and their
-              bond gave Ina a deeper subject: not simply an animal in a landscape, but trust, survival,
-              and the possibility of a new beginning.
+              Neighbors experienced with horses brought the animal into their barn, where she could
+              be cleaned, warmed, and cared for. Ina kept painting while she searched for the missing
+              parts of the story. The horse was eventually identified as Mambo, a Thoroughbred about
+              twenty-four years old. She had traveled several miles and arrived close to the farm where
+              she had been bred more than two decades earlier. The search connected Mambo with her
+              original breeder, who gave her a permanent home.
             </p>
             <p>
-              The sequence below records the painting as its scale, color, and relationships developed.
-              It is presented as a working process rather than a finished portrait.
+              Ina could not finish the painting without meeting Mambo. She flew to Ontario in October
+              2025 and found a very different horse from the one in the videos: tall, calm, and free of
+              the worry Ina had seen in her eyes. Mambo came out of the barn by following the black mare
+              who had become her trusted companion during recovery. That relationship helped Ina
+              understand the painting as a story of safety, reliance, and return.
+            </p>
+            <p>
+              The completed 4 × 6-foot canvas holds the moment when distress begins to give way to
+              relief. Although the figures are still, the landscape, pointed ears, and moving lines
+              retain the urgency of what has just happened. Ina was painting more than the likeness of
+              a horse. She was trying to give form to mystery, courage, endurance, and the instinct to
+              keep moving until safety can be found.
             </p>
           </div>
         </section>
@@ -49,12 +61,14 @@ export function CollectionPage({ category }: { category: ArtworkCategory }) {
       )}
       {isStudio && artworks.length > 0 && (
         <section className="studio-next-step">
-          <p className="section-label">Next stage</p>
+          <p className="section-label">The making</p>
           <div>
-            <h2>When the painting is complete</h2>
+            <h2>Nearly a year on canvas</h2>
             <p>
-              The approved final photograph will lead this page. These earlier stages will remain as
-              a record of how the portrait was built and how the horse&apos;s history entered the work.
+              Ina painted and contemplated Mambo&apos;s journey for almost a year. The stages above record
+              how she organized the story across the long rectangular canvas, building its geography,
+              time, color, and relationships as she learned more about the horse. The finished work is
+              both Mambo&apos;s portrait and a record of the people who helped carry her from danger into care.
             </p>
           </div>
         </section>

@@ -60,8 +60,8 @@ export const CATEGORY_INFO: Record<
   studio: {
     label: "Studio",
     shortLabel: "Studio",
-    navLabel: "Studio (In Progress)",
-    description: "A painting in progress, and the story that set it in motion.",
+    navLabel: "Studio",
+    description: "Mambo's completed portrait, its story, and the stages that shaped it.",
   },
 };
 
