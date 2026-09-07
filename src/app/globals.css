@@ -935,10 +935,18 @@ picture img {
   .drawer-contact {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 0;
     margin-top: 28px;
     color: var(--muted);
     font-size: 10px;
+  }
+
+  /* Hit area, not type size: each link keeps the 10px setting but fills a
+     44px row, matching the .browse-link coarse-pointer treatment. */
+  .drawer-contact a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
   }
 
   .work-page,

@@ -10,6 +10,8 @@ This file records non-sensitive editorial provenance. Raw interview transcripts,
 | High-school art study and portfolio in West Orange, New Jersey | About page | Needs Ina approval | Interview recollection |
 | Studies from 1975–1979 at Bard College, New York University, New York Studio School, and Parsons School of Design | About and CV | Verified against Ina's current website | Existing published biography and interview |
 | Study with Mercedes Matter, Nicolas Carone, Paul Georges, and Sidney Geist | About and CV | Verified against Ina's current website | Existing published biography |
+| First-person account of Ina's New York education and its influence on her freedom of expression | Welcome page | Approved for requested incorporation | Ina's existing published Welcome prose and text supplied by Andrew on September 7, 2026 |
+| Black-and-white studio portrait with the Schachtel's Bakery painting | Welcome page | Approved for requested reuse | Exact grayscale `IMG_4816.jpeg` derivative published on inaslein.com/welcome and retrieved September 7, 2026 |
 | New York Studio School as a formative period of sustained drawing and observation | About page | Needs Ina approval | Interview recollection and existing biography |
 | Artistic affinity with Alberto Giacometti, Alice Neel, and Lucian Freud | About page | Needs Ina approval | Interview recollection |
 | Family painting practice grew from family history and the bakery | About page and Work viewer | Needs Ina approval | Interview recollection |

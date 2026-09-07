@@ -1,0 +1,192 @@
+.welcomePage {
+  width: 100%;
+  padding: 48px 64px 0;
+  overflow: hidden;
+  background: var(--paper);
+  color: #001e31;
+}
+
+.welcomePage figure {
+  margin: 0;
+}
+
+.welcomePage picture,
+.welcomePage picture img {
+  display: block;
+  width: 100%;
+}
+
+.welcomePage picture img {
+  height: auto;
+}
+
+.welcomePage figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.introduction,
+.educationStory {
+  max-width: 1240px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.introduction {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.78fr) minmax(480px, 1.22fr);
+  align-items: center;
+  gap: clamp(54px, 7vw, 96px);
+  padding: 44px 0 84px;
+}
+
+.introductionCopy h1 {
+  margin: 0;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.introductionCopy h1 {
+  max-width: 520px;
+  font-size: clamp(38px, 3.6vw, 50px);
+  line-height: 1.12;
+}
+
+.educationIndex {
+  margin-top: 54px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.educationIndex > p {
+  margin: 0 0 24px;
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: 1.2;
+}
+
+.educationIndex ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.educationIndex li {
+  padding: 9px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.studioPortrait {
+  width: 100%;
+}
+
+.studioPortrait picture {
+  overflow: hidden;
+  background: var(--soft);
+}
+
+.educationStory {
+  padding: 108px clamp(40px, 8vw, 116px);
+  background: var(--soft);
+}
+
+.storyCopy {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.75;
+  text-align: left;
+}
+
+.educationStory p {
+  margin: 0 0 1.55em;
+}
+
+.educationStory p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1100px) and (min-width: 900px) {
+  .welcomePage {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .introduction {
+    grid-template-columns: minmax(270px, 0.72fr) minmax(420px, 1.28fr);
+    gap: 48px;
+  }
+}
+
+@media (max-width: 899px) {
+  .welcomePage {
+    padding: 0 20px;
+  }
+
+  .introduction {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 0 72px;
+  }
+
+  .studioPortrait {
+    width: calc(100% + 40px);
+    margin-left: -20px !important;
+    order: -1;
+  }
+
+  .studioPortrait figcaption {
+    padding: 0 20px;
+  }
+
+  .introductionCopy {
+    padding-top: 48px;
+  }
+
+  .introductionCopy h1 {
+    max-width: 640px;
+    font-size: clamp(36px, 6vw, 46px);
+  }
+
+  .educationIndex {
+    max-width: 620px;
+    margin-top: 42px;
+  }
+
+  .educationStory {
+    margin-right: -20px;
+    margin-left: -20px;
+    padding: 78px 28px;
+  }
+
+  .storyCopy {
+    max-width: 650px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .introductionCopy h1 {
+    font-size: 38px;
+  }
+
+  .educationIndex > p {
+    font-size: 25px;
+  }
+
+  .educationStory {
+    padding: 74px 22px;
+  }
+
+  .storyCopy {
+    font-size: 18px;
+    line-height: 1.72;
+  }
+}

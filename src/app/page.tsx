@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const HOME_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/about/", label: "Welcome" },
+  { href: "/welcome/", label: "Welcome" },
   { href: "/work/portraits/", label: "Portrait Gallery" },
   { href: "/work/family-histories/", label: "Family Portraits" },
   { href: "/work/equestrian-animals/", label: "Portraits of Love" },

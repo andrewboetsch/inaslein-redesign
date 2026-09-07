@@ -63,8 +63,10 @@ export default function CvPage() {
               <li>New York Studio School of Drawing, Painting and Sculpture</li>
               <li>Parsons School of Design</li>
             </ul>
-            <p className="cv-note">
-              At the New York Studio School, Ina studied with{" "}
+            <p>
+              Educated in New York City, Ina was able to move among these great nearby schools and
+              encounter a variety of influential teaching styles. At the New York Studio School,
+              she studied with{" "}
               <ExternalLink className="artist-reference-link" href="https://gagosian.com/quarterly/2020/10/20/essay-game-changer-mercedes-matter/">
                 Mercedes Matter
               </ExternalLink>
@@ -81,7 +83,8 @@ export default function CvPage() {
                 Sidney Geist
               </ExternalLink>
               . Drawing from models in motion made the school a particularly formative part of her
-              training.
+              training, bringing those varied influences together and giving her the gift of
+              drawing and painting with unyielding freedom of expression.
             </p>
           </div>
         </div>

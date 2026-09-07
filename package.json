@@ -11,7 +11,8 @@
     "content:build": "node scripts/build-artwork-catalog.mjs",
     "content:check": "node scripts/validate-content.mjs",
     "export:check": "node scripts/validate-export.mjs",
-    "verify": "npm run content:check && npm run lint && npm run typecheck && npm run build && npm run export:check"
+    "verify": "npm run content:check && npm run lint && npm run typecheck && npm run build && npm run export:check",
+    "a11y:check": "node scripts/validate-targets.mjs"
   },
   "dependencies": {
     "@fontsource/fjalla-one": "^5.2.8",

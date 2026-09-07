@@ -63,7 +63,6 @@ for (const required of ["_headers", "_redirects", "robots.txt", "sitemap.xml"]) 
 
 const redirectFile = await fs.readFile(path.join(outRoot, "_redirects"), "utf8");
 const requiredRedirects = new Map([
-  ["/welcome", "/about"],
   ["/portrait-gallery", "/work/portraits"],
   ["/family-portraits", "/work/family-histories"],
   ["/animals-we-love", "/work/equestrian-animals"],

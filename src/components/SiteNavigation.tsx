@@ -9,7 +9,7 @@ type CategoryLink = { href: string; label: string; count: number };
 
 const PRIMARY = [
   { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
+  { href: "/welcome", label: "Welcome" },
   { href: "/cv", label: "CV" },
   { href: "/contact", label: "Contact" },
 ];

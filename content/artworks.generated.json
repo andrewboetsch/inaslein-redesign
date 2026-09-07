@@ -334,6 +334,32 @@
     }
   },
   {
+    "slug": "ina-welcome-studio",
+    "category": "site",
+    "title": "Ina Slein in her studio",
+    "alt": "Ina Slein smiling with both thumbs raised beside her Schachtel's Bakery painting",
+    "caption": "Studio portrait from the Welcome page",
+    "featured": false,
+    "order": 5,
+    "width": 1535,
+    "height": 1151,
+    "orientation": "landscape",
+    "images": {
+      "thumb": {
+        "avif": "/artwork/generated/ina-welcome-studio-thumb.avif",
+        "webp": "/artwork/generated/ina-welcome-studio-thumb.webp"
+      },
+      "display": {
+        "avif": "/artwork/generated/ina-welcome-studio-display.avif",
+        "webp": "/artwork/generated/ina-welcome-studio-display.webp"
+      },
+      "full": {
+        "avif": "/artwork/generated/ina-welcome-studio-full.avif",
+        "webp": "/artwork/generated/ina-welcome-studio-full.webp"
+      }
+    }
+  },
+  {
     "slug": "ina-in-studio",
     "category": "site",
     "title": "Ina Slein in her studio",
