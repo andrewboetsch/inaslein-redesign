@@ -1,7 +1,7 @@
 # Homepage artwork
 
-On September 5, 2026, Andrew supplied `FullSizeRender.jpeg` for the homepage. On September 7, he asked for the homepage to closely match https://inaslein.com/, including its centered cover crop and responsive mobile treatment.
+On September 5, 2026, Andrew supplied `FullSizeRender.jpeg` for the homepage. On September 7, he asked for the homepage to closely match https://inaslein.com/, including its centered cover crop and responsive mobile treatment, and then clarified that it must use the exact horse-painting source image already published there.
 
-The supplied image is preserved privately as `private-intake/masters/artwork/entrance-horse.jpeg`. Public, metadata-free WebP derivatives at 640, 1280, and 2400 pixels wide are in `public/artwork/entrance/`. They retain the full composition and source colors; no generated image edits were applied. The source measures 4897 × 3259 pixels.
+The published `Horse Rescue .jpeg` source from Ina's existing site is preserved privately as `private-intake/masters/artwork/entrance-horse-inaslein-live.jpeg`. The 2,560 × 1,666-pixel source has SHA-256 `bad660a445bee5b4d6ef65868df82e4e6fe7ae788db2c2f8a6373c14fc7993b8`. Public, metadata-free WebP derivatives at 640, 1280, and 2400 pixels wide are in `public/artwork/entrance/`.
 
-The image is used only for the requested homepage. No title, date, medium, dimensions, or additional story claims have been added to the artwork catalog. The source composition remains unchanged; the homepage crops it responsively with `object-fit: cover` and a centered focal point, matching the reference page.
+The image is used only for the requested homepage. No title, date, medium, dimensions, or additional story claims have been added to the artwork catalog. The responsive derivatives retain the published source's composition and colors without generative edits; the homepage applies the reference page's centered cover crop through CSS.

@@ -71,8 +71,8 @@ export default function Homepage() {
           <img
             src={withBasePath("/artwork/entrance/horse-2400.webp")}
             alt="Painting by Ina Slein of a dark horse and three people among trees in a colorful landscape."
-            width={4897}
-            height={3259}
+            width={2560}
+            height={1666}
             loading="eager"
             fetchPriority="high"
           />
