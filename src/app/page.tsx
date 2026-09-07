@@ -4,7 +4,7 @@ import { withBasePath } from "@/lib/basePath";
 import styles from "./entrance.module.css";
 
 export const metadata: Metadata = {
-  title: { absolute: "Ina Slein | Painter" },
+  title: { absolute: "Ina Slein Fine Artist" },
   alternates: { canonical: "/" },
 };
 
@@ -32,9 +32,9 @@ export default function Homepage() {
   return (
     <div className={styles.homepage}>
       <header className={styles.header}>
-        <Link href="/" className={styles.artistName} aria-current="page">
-          Ina Slein
-        </Link>
+        <h1 className={styles.artistName}>
+          <Link href="/" aria-current="page">Ina Slein Fine Artist</Link>
+        </h1>
         <p className={styles.domain}>inaslein.com</p>
       </header>
 
@@ -80,9 +80,9 @@ export default function Homepage() {
       </div>
 
       <section className={styles.contactPrompt} aria-labelledby="homepage-contact-heading">
-        <h1 id="homepage-contact-heading">
+        <h2 id="homepage-contact-heading">
           <Link href="/contact/">Contact Us</Link>
-        </h1>
+        </h2>
       </section>
     </div>
   );

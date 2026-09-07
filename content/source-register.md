@@ -4,6 +4,10 @@ This file records non-sensitive editorial provenance. Raw interview transcripts,
 
 | Topic | Public use | Status | Source basis |
 |---|---|---|---|
+| Canonical professional entity name: Ina Slein Fine Artist | Homepage, metadata, and structured data | Confirmed canonical | Google Business Profile and Andrew's canonical-authority instruction, September 7, 2026 |
+| Public business location: Wellington, Florida; no street address published | Sitewide business details and structured data | Reconciled from conflicting website value | Google Business Profile and Andrew's canonical-authority instruction; prior site value was Lake Worth, Florida |
+| Public business telephone: (561) 632-8055 | Contact and structured data | Confirmed canonical | Google Business Profile public listing |
+| Google Business Profile, Instagram `@inaslein`, and Facebook `ina.sleinrubino` identities | Structured-data `sameAs` links | Confirmed for association | Google Business Profile authority instruction; public platform identities verified September 7, 2026 |
 | Drawing began at age four | About and CV | Needs Ina approval | Interview recollection and stakeholder confirmation |
 | First formal instruction around age nine included drawing children in motion | About and CV | Needs Ina approval | Interview recollection |
 | Frequent childhood visits with her mother to the Metropolitan Museum of Art and Museum of Modern Art | About and CV | Needs Ina approval | Interview recollection |

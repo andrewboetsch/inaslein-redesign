@@ -75,6 +75,98 @@ for (const [source, destination] of requiredRedirects) {
   }
 }
 
+const homepageHtml = await fs.readFile(path.join(outRoot, "index.html"), "utf8");
+const homepageH1 = homepageHtml.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]
+  .replace(/<[^>]+>/g, "")
+  .replace(/\s+/g, " ")
+  .trim();
+if (homepageH1 !== "Ina Slein Fine Artist") {
+  errors.push(`Homepage H1 must be "Ina Slein Fine Artist"; found ${JSON.stringify(homepageH1)}`);
+}
+
+const jsonLdPayloads = [...homepageHtml.matchAll(
+  /<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi,
+)].map((match) => {
+  try {
+    return JSON.parse(match[1]);
+  } catch (error) {
+    errors.push(`Homepage contains invalid JSON-LD: ${error.message}`);
+    return null;
+  }
+}).filter(Boolean);
+
+const entityGraph = jsonLdPayloads.find((payload) => Array.isArray(payload["@graph"]));
+if (!entityGraph) {
+  errors.push("Homepage is missing the canonical business entity graph");
+} else {
+  const graph = entityGraph["@graph"];
+  const nodeById = new Map(graph.filter((node) => node["@id"]).map((node) => [node["@id"], node]));
+  const businessId = "https://inaslein.com/#business";
+  const personId = "https://inaslein.com/#ina-slein";
+  const websiteId = "https://inaslein.com/#website";
+  const placeId = "https://inaslein.com/#wellington-fl";
+  const business = nodeById.get(businessId);
+  const person = nodeById.get(personId);
+  const website = nodeById.get(websiteId);
+  const place = nodeById.get(placeId);
+  const expectedSameAs = [
+    "https://www.google.com/maps?cid=4017439670596771296",
+    "https://www.instagram.com/inaslein/",
+    "https://www.facebook.com/ina.sleinrubino/",
+  ];
+
+  if (business?.["@type"] !== "ProfessionalService") {
+    errors.push("Canonical business node must use ProfessionalService");
+  }
+  if (business?.name !== "Ina Slein Fine Artist") {
+    errors.push("Canonical business node has the wrong name");
+  }
+  if (business?.url !== "https://inaslein.com" || business?.telephone !== "+15616328055") {
+    errors.push("Canonical business node does not match the GBP website and telephone");
+  }
+  if (business?.location?.["@id"] !== placeId || place?.name !== "Wellington") {
+    errors.push("Canonical business node must resolve to Wellington, Florida");
+  }
+  if (JSON.stringify(business?.sameAs) !== JSON.stringify(expectedSameAs)) {
+    errors.push("Canonical business sameAs links do not match GBP, Instagram, and Facebook");
+  }
+  if (person?.worksFor?.["@id"] !== businessId || business?.employee?.["@id"] !== personId) {
+    errors.push("Person and business nodes are not linked through their stable @id values");
+  }
+  if (website?.publisher?.["@id"] !== businessId) {
+    errors.push("WebSite publisher does not resolve to the canonical business @id");
+  }
+
+  const serviceNodes = graph.filter((node) => node["@type"] === "Service");
+  if (serviceNodes.length !== 3 || serviceNodes.some((service) => service.provider?.["@id"] !== businessId)) {
+    errors.push("Service nodes must resolve to the canonical business @id");
+  }
+
+  const pageNodes = graph.filter((node) => [
+    "WebPage", "AboutPage", "ProfilePage", "CollectionPage", "ContactPage",
+  ].includes(node["@type"]));
+  if (pageNodes.length !== 5 || pageNodes.some((page) => page.isPartOf?.["@id"] !== websiteId)) {
+    errors.push("Relevant page nodes must resolve to the canonical WebSite @id");
+  }
+
+  const schemaKeys = new Set();
+  JSON.stringify(entityGraph, (key, value) => {
+    if (key) schemaKeys.add(key);
+    return value;
+  });
+  for (const forbiddenKey of ["address", "streetAddress", "postalCode", "geo"]) {
+    if (schemaKeys.has(forbiddenKey)) {
+      errors.push(`Canonical entity graph must not publish or infer ${forbiddenKey}`);
+    }
+  }
+
+  for (const id of nodeById.keys()) {
+    if (!id.startsWith("https://inaslein.com/")) {
+      errors.push(`Schema node uses a non-canonical @id: ${id}`);
+    }
+  }
+}
+
 if (errors.length) {
   console.error(errors.slice(0, 100).map((error) => `- ${error}`).join("\n"));
   process.exit(1);

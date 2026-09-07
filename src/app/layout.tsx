@@ -12,13 +12,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://inaslein.com"),
   title: {
-    default: "Ina Slein | Painter",
-    template: "%s | Ina Slein",
+    default: "Ina Slein Fine Artist",
+    template: "%s | Ina Slein Fine Artist",
   },
   description: "Paintings by Ina Slein, including commissioned portraits, family histories, and animal subjects.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Ina Slein | Painter",
+    title: "Ina Slein Fine Artist",
     description: "Portraits, family histories, and paintings from the studio archive.",
     type: "website",
     url: "/",
