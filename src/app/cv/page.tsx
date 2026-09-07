@@ -64,9 +64,9 @@ export default function CvPage() {
               <li>Parsons School of Design</li>
             </ul>
             <p>
-              Educated in New York City, Ina was able to move among these great nearby schools and
-              encounter a variety of influential teaching styles. At the New York Studio School,
-              she studied with{" "}
+              Educated in New York City, Ina had the opportunity to attend these great nearby
+              schools and encounter a variety of influential teaching styles. At the New York
+              Studio School, she studied with{" "}
               <ExternalLink className="artist-reference-link" href="https://gagosian.com/quarterly/2020/10/20/essay-game-changer-mercedes-matter/">
                 Mercedes Matter
               </ExternalLink>
