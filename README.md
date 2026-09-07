@@ -8,7 +8,7 @@ No CMS, database, runtime API, prices, or contact form are used. The production 
 
 | Route | Purpose |
 |---|---|
-| `/` | Featured landscape painting and an uncropped visual index |
+| `/` | Featured landscape painting with the reference-matched responsive crop |
 | `/work/portraits` | Portraits |
 | `/work/family-histories` | Family history paintings |
 | `/work/equestrian-animals` | Equestrian and animal subjects |

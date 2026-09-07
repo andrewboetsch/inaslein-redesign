@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import "@fontsource/fjalla-one";
 import "@fontsource-variable/bodoni-moda";
 import "@fontsource-variable/manrope";
+import "@fontsource-variable/raleway";
+import "@fontsource-variable/roboto";
 import { LocalBusinessSchema } from "@/components/LocalBusinessSchema";
 import { SiteFrame } from "@/components/SiteFrame";
 import { getAvailableCategories } from "@/lib/artworks";

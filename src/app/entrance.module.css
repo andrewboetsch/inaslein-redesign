@@ -1,35 +1,35 @@
 .homepage {
-  display: grid;
-  height: 100svh;
-  grid-template-rows: auto auto minmax(0, 1fr);
-  overflow: hidden;
+  min-height: 100svh;
   background: #fff;
-  color: #102b3f;
+  color: #001e31;
 }
 
 .header {
   display: flex;
-  width: min(100% - 48px, 1112px);
-  min-height: 106px;
+  width: min(calc(100% - 88px), 1112px);
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
+  padding: 24px 0;
 }
 
 .artistName {
-  font-size: clamp(34px, 3.5vw, 50px);
-  font-weight: 380;
-  letter-spacing: 0.13em;
-  line-height: 1;
+  font-family: "Raleway Variable", Raleway, sans-serif;
+  font-size: 49px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
 .domain,
 .mobileDomain {
   margin: 0;
+  font-family: "Roboto Variable", Roboto, sans-serif;
   font-size: 28px;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .navigationBar {
@@ -42,28 +42,31 @@
 
 .desktopNavigation {
   display: flex;
-  width: min(100% - 48px, 1112px);
+  width: min(calc(100% - 88px), 1112px);
   margin: 0 auto;
   align-items: center;
-  gap: clamp(24px, 3vw, 44px);
+  gap: 32px;
 }
 
 .desktopNavigation a,
 .mobileNavigation a {
-  font-size: 14px;
-  font-weight: 560;
-  letter-spacing: 0.14em;
+  font-family: "Roboto Variable", Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.143em;
+  line-height: 24px;
   text-transform: uppercase;
 }
 
 .desktopNavigation a[aria-current="page"] {
-  color: #00638c;
-  font-weight: 720;
+  color: #02537e;
+  font-weight: 700;
 }
 
 .desktopNavigation a:hover,
-.mobileNavigation a:hover {
-  color: #00638c;
+.mobileNavigation a:hover,
+.contactPrompt a:hover {
+  color: #02537e;
 }
 
 .mobileNavigation,
@@ -72,41 +75,67 @@
 }
 
 .artwork {
-  display: flex;
-  min-height: 0;
+  display: block;
   width: 100%;
-  align-items: flex-start;
-  justify-content: center;
+  height: 60vh;
   overflow: hidden;
 }
 
 .artwork picture {
-  display: flex;
+  display: block;
   width: 100%;
   height: 100%;
-  align-items: flex-start;
-  justify-content: center;
 }
 
 .artwork img {
   display: block;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
-@media (max-width: 720px) {
+.contactPrompt {
+  min-height: 240px;
+  padding: 56px 0;
+  text-align: center;
+}
+
+.contactPrompt h1 {
+  display: flex;
+  width: min(calc(100% - 88px), 1112px);
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.contactPrompt h1::after {
+  width: 50px;
+  height: 2px;
+  margin-top: 24px;
+  background: #dedede;
+  content: "";
+}
+
+@media (max-width: 1279px) {
+  .artistName {
+    font-size: 41px;
+  }
+}
+
+@media (max-width: 1023px) {
   .header {
     width: 100%;
-    min-height: 90px;
     justify-content: center;
-    padding: 20px;
+    padding: 24px;
   }
 
   .artistName {
-    font-size: clamp(29px, 8vw, 38px);
     text-align: center;
   }
 
@@ -121,10 +150,10 @@
   }
 
   .mobileDomain {
+    position: absolute;
+    left: 50%;
     display: block;
-    margin: 0 auto;
-    padding-right: 34px;
-    font-size: 26px;
+    transform: translateX(-50%);
   }
 
   .mobileNavigation {
@@ -146,8 +175,24 @@
   }
 
   .menuIcon {
-    font-size: 24px;
-    line-height: 1;
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: square;
+    stroke-width: 2;
+  }
+
+  .closeBars {
+    display: none;
+  }
+
+  .mobileNavigation[open] .menuBars {
+    display: none;
+  }
+
+  .mobileNavigation[open] .closeBars {
+    display: initial;
   }
 
   .mobileNavigation nav {
@@ -160,17 +205,39 @@
     flex-direction: column;
     padding: 18px 24px 22px;
     background: #f5f5f5;
-    box-shadow: 0 12px 24px rgb(16 43 63 / 10%);
+    box-shadow: 0 12px 24px rgb(0 30 49 / 10%);
   }
 
   .mobileNavigation a {
     display: flex;
-    min-height: 44px;
+    min-height: 48px;
     align-items: center;
     border-top: 1px solid #dedede;
   }
 
   .mobileNavigation a:first-child {
     border-top: 0;
+  }
+
+  .artwork {
+    height: 500px;
+  }
+
+  .contactPrompt h1 {
+    width: calc(100% - 48px);
+  }
+}
+
+@media (max-width: 767px) {
+  .artistName {
+    font-size: 35px;
+  }
+
+  .contactPrompt {
+    padding-top: 40px;
+  }
+
+  .contactPrompt h1 {
+    font-size: 35px;
   }
 }

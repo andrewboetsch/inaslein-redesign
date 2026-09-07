@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 const HOME_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/work/", label: "Work" },
-  { href: "/about/", label: "About" },
-  { href: "/cv/", label: "CV" },
-  { href: "/contact/", label: "Contact" },
+  { href: "/about/", label: "Welcome" },
+  { href: "/work/portraits/", label: "Portrait Gallery" },
+  { href: "/work/family-histories/", label: "Family Portraits" },
+  { href: "/work/equestrian-animals/", label: "Portraits of Love" },
 ];
 
 function HomepageLinks() {
@@ -44,7 +44,14 @@ export default function Homepage() {
         </nav>
         <details className={styles.mobileNavigation}>
           <summary>
-            <span className={styles.menuIcon} aria-hidden="true">☰</span>
+            <svg className={styles.menuIcon} viewBox="0 0 24 24" aria-hidden="true">
+              <g className={styles.menuBars}>
+                <path d="M3 6h18M3 12h18M3 18h18" />
+              </g>
+              <g className={styles.closeBars}>
+                <path d="m5 5 14 14M19 5 5 19" />
+              </g>
+            </svg>
             <span className="visually-hidden">Menu</span>
           </summary>
           <nav aria-label="Primary navigation">
@@ -71,6 +78,12 @@ export default function Homepage() {
           />
         </picture>
       </div>
+
+      <section className={styles.contactPrompt} aria-labelledby="homepage-contact-heading">
+        <h1 id="homepage-contact-heading">
+          <Link href="/contact/">Contact Us</Link>
+        </h1>
+      </section>
     </div>
   );
 }
