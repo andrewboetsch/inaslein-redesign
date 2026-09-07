@@ -49,30 +49,27 @@ export default function WelcomePage() {
         </h2>
         <div className={styles.storyCopy}>
           <p>
-            Educated in New York City, Ina had the rare opportunity to move among these nearby
-            schools and experience a variety of influential teaching styles. Together, those
-            different approaches gave her the gift of drawing and painting with unyielding freedom
-            of expression.
+            Educated in New York City, Ina&apos;s close proximity to these great schools exposed her
+            to a variety of influential teaching styles that when combined gave her the gift of
+            drawing and painting with unyielding freedom of expression.
           </p>
           <p>
-            Her education began at Bard College with Elizabeth Murray, her very first instructor.
-            Murray sent the class into the woods to collect debris from the forest floor, then asked
-            the students to construct small sculptures from what they found. Through that
-            assignment, Ina began to understand shapes in space.
+            Elizabeth Murray, her very first instructor at Bard, assigned the class to go into the
+            woods and collect debris from the forest floor. They then constructed small sculptures.
+            That was her introduction to understanding shapes in space.
           </p>
           <p>
-            Later, in Ina&apos;s first drawing class, Murray Reich looked at her first drawing and
-            suggested that she become familiar with the work of Alberto Giacometti. She followed
-            his suggestion and felt immediately excited by the energy in Giacometti&apos;s drawings.
+            Murray Reich, in their first drawing class and based on her first drawing, suggested she
+            become familiar with the work of Alberto Giacometti. That she did and felt excited by
+            the energy in the drawings.
           </p>
           <p>
-            That same energy carried into the New York Studio School for Painting, Drawing and
-            Sculpture and became part of how Ina and her classmates learned to express themselves.
-            They worked endlessly, painting and drawing the figure from patient models, while Paul
-            Georges, Sidney Geist, Mercedes Matter and Nicolas Carone reviewed their work every
-            week. Their teaching shaped Ina&apos;s artistic focus on people and portraits, and this
-            wonderful education has remained her companion throughout all the years of her artistic
-            expression.
+            The New York Studio School for Painting, Drawing and Sculpture infused that same energy
+            into their expression as learners. Paul Georges, Sidney Geist, Mercedes Matter and
+            Nicholas Carone reviewed their work on a weekly basis as they worked endlessly, figure
+            painting and drawing from patient models. This style of teaching definitely influenced
+            her artistic focus on people and portraits. This wonderful education has been her
+            companion throughout her artistic expression over the years.
           </p>
         </div>
       </section>
