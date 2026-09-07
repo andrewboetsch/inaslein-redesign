@@ -76,14 +76,14 @@
 }
 
 .artwork {
-  --vertical-image-scale: 1.866;
-  --vertical-image-translate-y: -39.5%;
+  --vertical-image-scale: 1.5;
+  --vertical-image-translate-y: -49.5%;
 
   position: relative;
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 2.868 / 1;
+  aspect-ratio: 2.304 / 1;
   overflow: hidden;
 }
 
