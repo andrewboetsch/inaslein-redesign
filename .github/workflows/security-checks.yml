@@ -19,8 +19,8 @@ jobs:
           cache: npm
       - name: Install locked dependencies
         run: npm ci
-      - name: Confirm patched sharp version
-        run: node -e "if (require('sharp').versions.sharp !== '0.35.5') process.exit(1)"
+      - name: Verify all locked Sharp copies and installed version
+        run: node scripts/verify-sharp-lock.mjs
       - name: Verify static export, types, lint, and content
         run: npm run verify
         env:
